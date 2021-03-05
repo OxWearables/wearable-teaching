@@ -14,12 +14,12 @@ from sklearn.metrics import confusion_matrix
 
 LABEL_DICTIONARY = 'label-dictionary.csv'
 
-DOHERTY_NatComms_DICT_COL = 'NatComms-label-simplified'
+DOHERTY_NatComms_DICT_COL = 'label:NatCommsSimplified'
 DOHERTY_NatComms_COLOURS = {'sleep':'blue', 'sedentary':'red',
     'tasks-light':'darkorange', 'walking':'lightgreen', 'moderate':'green'}
 DOHERTY_NatComms_LABELS = list(DOHERTY_NatComms_COLOURS.keys())
 
-WILLETS_SciReports_DICT_COL = 'SciReports-label-simplified'
+WILLETS_SciReports_DICT_COL = 'Slabel:SciReportsSimplified'
 WILLETS_SciReports_COLOURS = {'sleep':'blue', 'sit.stand':'red',
     'vehicle':'darkorange', 'walking':'lightgreen', 'mixed':'green',
     'bicycling':'purple'}
