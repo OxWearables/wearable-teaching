@@ -94,6 +94,7 @@ gunzip ../../data/myAcc-timeSeries.csv.gz
 ```
 
 
+**Hang to update this small section**
 Finally, we want to check the model predictions against your true annotations.
 
 ```
@@ -108,7 +109,6 @@ Inspect `plot.png` in your `data` folder and various `.png` generated in your `p
 For this practical, we wish for you to produce some visualisations to share in a presentation. This practical is open-ended in nature, you can explore any topic as the basis of your visualisation according to your interests.
 
 ## Timeline
-
 Prepare a timeline to illustrate your days.
 
 Taken from Nature news feature ['The lab that knows where your time really goes'](https://www.nature.com/news/the-lab-that-knows-where-your-time-really-goes-1.18609)
@@ -125,16 +125,16 @@ From ['Using wearable cameras to categorise type and context of accelerometer-id
 From ['Wearable camera-derived microenvironments in relation to personal exposure to PM2.5'](https://www.sciencedirect.com/science/article/pii/S0160412018301478), Salmon et al.
 ![](./figs/viz3_concepts.jpg)
 
-## Side-by-side
 
+## Side-by-side
 Compare the data captured by the two devices (camera vs accelerometer) when you are performing different activities. Prepare a table of different activities, e.g. 'sitting', 'eating', 'walking' and show a side-by-side comparison of the two sources of data.
 
 Here is a comparison of the activities 'typing on computer Vs. typing on phone' as captured by the two devices. ['Are Accelerometers for Activity Recognition a Dead-end?'](https://arxiv.org/pdf/2001.08111.pdf), Tong et al.
 
 ![](./figs/activity_comparison.png)
 
-
 ![](./figs/viz4.png)
+
 
 ## Propose your own task
 The above is an example from last year.
