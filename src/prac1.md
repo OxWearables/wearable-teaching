@@ -1,9 +1,9 @@
 # Practical 1: Fundamentals of Sensing, Setting up devices
 
 ### Overview
-Over the next couple of days, you will be collecting and analyzing your own data using 2 devices: a wearable camera and an accelerometer.
+Over the next couple of days, you will be collecting and analysing your own data using 2 devices: a wearable camera and an accelerometer.
 
-By going through this practical, we hope that you will learn more about how innovative technologies such as wearable cameras and acceleromoters are being used in health and social research. You might also find it interesting to see how many different activities you do in a day and where you spend the majority of your time.
+By going through this practical, we hope that you will learn more about how innovative technologies such as wearable cameras and accelerometers are being used in health and social research. You might also find it interesting to see how many different activities you do in a day and where you spend the majority of your time.
 
 Our road map will look like this:
 
@@ -21,6 +21,7 @@ In this practical, we'll go through an ethics training and set up your devices t
 ### Miscellaneous
 All the commands will work on Linux and Mac. First, you will need to clone the repo on your own machine by:
 ```
+$ cd ~/Development/
 $ git clone https://github.com/activityMonitoring/wearable-teaching.git
 ```
 
@@ -126,36 +127,64 @@ Now collect your devices from Hang, who will go through the accelerometer set-up
 
 You should have been given 1 wearable camera (Vicon Autographer), 1 wrist-worn accelerometer (and 1 micro-USB cable).
 
-### Requirements
-Before we begin, let's take a moment to install the a Python package `tqdm` that we will need today. You're also expected to use Python 3.6. Open Terminal and run:  
-<!--
-```
-$ pip install -r requirements.txt
-``` -->
-
-```
-$ pip install tqdm
-```
-
 
 ### Accelerometer
 Your accelerometer has already been set up to record data at 100Hz. The local time of the accelerometer has been synced to Hang's computer.
 
 
 ### Camera
+
+#### software requirements
+This week, you will use [our group's wearable camera browser](https://github.com/activityMonitoring/oxford-wearable-camera-browser). Here are the steps, including the installation of [Node.js](https://nodejs.org/en/), to get up and running with it.
+
+```
+# 1. Download/clone this git repo
+$ cd ~/Development/
+$ git clone git@github.com:activityMonitoring/oxford-wearable-camera-browser.git
+
+# 2. Install nodeJS
+$ brew install node
+
+# 3. Install npm package dependencies
+$ npm install
+
+# 4. Open/run browser
+$ npm start
+```
+
+* Once it has been loaded properly you should see a window like this
+
+![](./figs/browser_init.png)
+
+* Hover your cursor over the different icons to familiarise yourself with the available functions.
+
+#### camera setup
+
 To set up the camera, you will run a script to ensure the camera has a correct local time and that it does not contain any past data. The time syncing step is important for you to correctly align the accelerometer and camera data.
 
 The time syncing is based on your Mac's local time - so it is expected to be in UK time and not to deviate too much from the time on Hang's computer. You should also run the script as soon as your camera is plugged in to minimise any time lag.
 
 Open your terminal and run these commands to set up your camera:
 
-* Navigate to `practicals/scripts`, we will use the script `autographer.py` located inside your `scripts` folder.
+* Within the oxford-wearable-camera-browser directory, navigate to the `utilities` folder. We will use the script `autographer.py` located inside this folder - see [here for more instructions if needed](https://github.com/activityMonitoring/oxford-wearable-camera-browser/tree/master/utilities).
+
+* take a moment to install the a Python package `tqdm` that we will need today. You're also expected to use Python 3.6. Open Terminal and run:  
+<!--
+```
+$ pip install -r requirements.txt
+``` -->
+
+```
+$ cd ~/Development/oxford-wearable-camera-browser/utilities/
+$ pip3 install tqdm
+```
+
 
 * Plug in your camera to your Mac
 
 * __IMPORTANT: Run this immediately after the camera is plugged in__
 ```
-$ python autographer.py --setup True
+$ python3 autographer.py --setTime True
 ```
 
 * You can now safely unplug the device.
