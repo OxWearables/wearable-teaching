@@ -126,7 +126,13 @@ Now collect your devices from Hang, who will go through the accelerometer set-up
 You should have been given 1 wearable camera (Vicon Autographer), 1 wrist-worn accelerometer (and 1 micro-USB cable).
 For the Mac users, you can use the [Open Movement](https://config.openmovement.dev/) website to try setup but it might not 
 always work. For the Windows users, you can download [OMGUI](https://github.com/digitalinteraction/openmovement/wiki/AX3-GUI)
-and follow the instructions in the `prac/setup.pdf`.
+and follow the instructions in the `prac/setup.pdf`. Note that you should pay attention to several key
+parameters which might be different from the setup manual:
+
+1. Change the sampling frequency to 30Hz.
+2. Change the start date to today. 
+3. Leave the rest to the default settings.
+
 
 ### Accelerometer
 Your accelerometer has already been set up to record data at 100Hz. The local time of the accelerometer has been synced to Hang's computer.
