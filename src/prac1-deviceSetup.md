@@ -120,13 +120,13 @@ The accelerometer is robust and water-proof, and has been designed to be worn wh
 ![](./figs/person_w_acc.png)
 
 
-
-
 # 3. Setting up the devices.
 Now collect your devices from Hang, who will go through the accelerometer set-up with you.
 
 You should have been given 1 wearable camera (Vicon Autographer), 1 wrist-worn accelerometer (and 1 micro-USB cable).
-
+For the Mac users, you can use the [Open Movement](https://config.openmovement.dev/) website to try setup but it might not 
+always work. For the Windows users, you can download [OMGUI](https://github.com/digitalinteraction/openmovement/wiki/AX3-GUI)
+and follow the instructions in the `prac/setup.pdf`.
 
 ### Accelerometer
 Your accelerometer has already been set up to record data at 100Hz. The local time of the accelerometer has been synced to Hang's computer.
