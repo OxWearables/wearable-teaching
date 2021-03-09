@@ -12,15 +12,15 @@ register_matplotlib_converters()
 import itertools
 from sklearn.metrics import confusion_matrix
 
-LABEL_DICTIONARY = 'label-dictionary.csv'
+ANNO_LABEL_DICT = 'annotation-label-dictionary.csv'
 
-DOHERTY_NatComms_DICT_COL = 'label:NatCommsSimplified'
+DOHERTY_NatComms_DICT_COL = 'label:Doherty2018'
 DOHERTY_NatComms_COLOURS = {'sleep':'blue', 'sedentary':'red',
     'tasks-light':'darkorange', 'walking':'lightgreen', 'moderate':'green'}
 DOHERTY_NatComms_LABELS = list(DOHERTY_NatComms_COLOURS.keys())
 
-WILLETS_SciReports_DICT_COL = 'Slabel:SciReportsSimplified'
-WILLETS_SciReports_COLOURS = {'sleep':'blue', 'sit.stand':'red',
+WILLETS_SciReports_DICT_COL = 'label:Willetts2018'
+WILLETS_SciReports_COLOURS = {'sleep':'blue', 'sit-stand':'red',
     'vehicle':'darkorange', 'walking':'lightgreen', 'mixed':'green',
     'bicycling':'purple'}
 WILLETS_SciReports_LABELS = list(WILLETS_SciReports_COLOURS.keys())
@@ -236,11 +236,11 @@ def main(tsFile, annoFile, activityModel, normalize, plotFile):
 
     if activityModel.endswith("doherty2018.tar"):
         labelColors = DOHERTY_NatComms_COLOURS
-        labelDict = buildLabelDict(LABEL_DICTIONARY, DOHERTY_NatComms_DICT_COL)
+        labelDict = buildLabelDict(ANNO_LABEL_DICT, DOHERTY_NatComms_DICT_COL)
         labels = DOHERTY_NatComms_LABELS
     elif activityModel.endswith("willetts2018.tar"):
         labelColors = WILLETS_SciReports_COLOURS
-        labelDict = buildLabelDict(LABEL_DICTIONARY, WILLETS_SciReports_DICT_COL)
+        labelDict = buildLabelDict(ANNO_LABEL_DICT, WILLETS_SciReports_DICT_COL)
         labels = WILLETS_SciReports_LABELS
 
     fixTsData(tsData)
