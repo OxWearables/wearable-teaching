@@ -7,11 +7,11 @@ By going through this practical, we hope that you will learn more about how inno
 
 Our road map will look like this:
 
-1. Ethics training. Set up devices and collect your own data.
-2. Annotation training.
-3. Extract and annotate two days worth of data from your devices.
+1. Set up devices and collect your own data.
+2. Extract and annotate wearable camera data.
+2. Extract and annotate accelerometer data.
 4. Time-series analysis and machine learning.
-5. Visualize your data! See a motivating end product below:
+5. Visualise your data for a presentation on Friday!
 
 ![](./figs/sample_image_timeseries.png)
 
@@ -27,7 +27,7 @@ $ git clone https://github.com/activityMonitoring/wearable-teaching.git
 
 
 
-# 1. Ethics Training.
+# 1. Ethics background reading
 As you may be aware, various ethical issues can stem from research using image-based data. It is important that all researchers involved go through an ethics training to familiarise themselves of related ethical issues.
 
 Your ethics training will consists of going through a list of necessary reading materials as well as passing an online certificated course.
@@ -43,16 +43,10 @@ Your ethics training will consists of going through a list of necessary reading 
 * Doherty, A.R., Williamson, W., Hillsdon, M., Hodges, S., Foster, C., Kelly, P. (2013) [Influencing health-related behaviour with wearable cameras: strategies & ethical considerations](https://dl.acm.org/doi/pdf/10.1145/2526667.2526677). Proceedings of SenseCam and Pervasive Imaging Conference, San Diego, USA, November 18-19, 2013
 
 
-### B. Ethics Training Course [optional]
-Complete the [Ethics Training Course](https://weblearn.ox.ac.uk/access/content/group/52eb73ab-d173-4c69-99a9-0eff1fd21574/2017/01_bio_int_imscp/01_bio/index_01_bio.html). Once you have passed the course quiz (scoring at least 90%), you will receive a certificate in your Oxford email.
-
-**Handin:** Forward course certicifate to [Hang](hang.yuan@keble.ox.ac.uk).
-
-
-### Declaration
+### B. Ethics declaration
 You will need to complete the ethical declaration form in order to continue. This can be found at `practicals/prac1_data_collection/declaration.pdf`
 
-NB. Aiden Doherty is the Principal Investigator.
+NB. You do not need to tick the part of the form indicating that you have completed the ethics training course. Aiden Doherty is the Principal Investigator.
 
 **Handin:** Ethical Declaration (hard copy of `practicals/prac1_data_collection/declaration.pdf`) to Hang.
 
@@ -120,17 +114,18 @@ The accelerometer is robust and water-proof, and has been designed to be worn wh
 ![](./figs/person_w_acc.png)
 
 
+
 # 3. Setting up the devices.
 Now collect your devices from Hang, who will go through the accelerometer set-up with you.
 
 You should have been given 1 wearable camera (Vicon Autographer), 1 wrist-worn accelerometer (and 1 micro-USB cable).
-For the Mac users, you can use the [Open Movement](https://config.openmovement.dev/) website to try setup but it might not 
+For the Mac users, you can use the [Open Movement](https://config.openmovement.dev/) website to try setup but it might not
 always work. For the Windows users, you can download [OMGUI](https://github.com/digitalinteraction/openmovement/wiki/AX3-GUI)
-and follow the instructions in the `prac/setup.pdf`. Note that you should pay attention to several key
+and follow the instructions in the `practicals/prac1-deviceSetup/accSetup.pdf`. Note that you should pay attention to several key
 parameters which might be different from the setup manual:
 
 1. Change the sampling frequency to 30Hz.
-2. Change the start date to today. 
+2. Change the start date to today.
 3. Leave the rest to the default settings.
 
 
@@ -209,11 +204,6 @@ $ python3 autographer.py --setTime True
 Turn the camera on, and check that only the screen below shows when pressing the 'Menus' button:
 
 ![](./figs/camera_screen.png)
-
-
-
-
-
 
 
 
