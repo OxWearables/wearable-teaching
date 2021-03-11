@@ -1,5 +1,6 @@
 import matplotlib
 matplotlib.use('Agg')
+import re
 import argparse
 from datetime import datetime, timedelta, time
 import matplotlib.pyplot as plt
@@ -14,16 +15,29 @@ from sklearn.metrics import confusion_matrix
 
 ANNO_LABEL_DICT = 'annotation-label-dictionary.csv'
 
-DOHERTY_NatComms_DICT_COL = 'label:Doherty2018'
-DOHERTY_NatComms_COLOURS = {'sleep':'blue', 'sedentary':'red',
-    'tasks-light':'darkorange', 'walking':'lightgreen', 'moderate':'green'}
-DOHERTY_NatComms_LABELS = list(DOHERTY_NatComms_COLOURS.keys())
+DOHERTY2018_DICT_COL = 'label:Doherty2018'
+DOHERTY2018_COLOURS = {'sleep':'blue', 
+                       'sedentary': 'red',
+                       'tasks-light': 'darkorange',
+                       'walking': 'lightgreen',
+                       'moderate': 'green'}
+DOHERTY2018_LABELS = list(DOHERTY2018_COLOURS.keys())
 
-WILLETS_SciReports_DICT_COL = 'label:Willetts2018'
-WILLETS_SciReports_COLOURS = {'sleep':'blue', 'sit-stand':'red',
-    'vehicle':'darkorange', 'walking':'lightgreen', 'mixed':'green',
-    'bicycling':'purple'}
-WILLETS_SciReports_LABELS = list(WILLETS_SciReports_COLOURS.keys())
+WILLETTS2018_DICT_COL = 'label:Willetts2018'
+WILLETTS2018_COLOURS = {'sleep':'blue', 
+                        'sit-stand': 'red',
+                        'vehicle': 'darkorange',
+                        'walking': 'lightgreen',
+                        'mixed': 'green',
+                        'bicycling': 'purple'}
+WILLETTS2018_LABELS = list(WILLETTS2018_COLOURS.keys())
+
+WALMSLEY2020_DICT_COL = 'label:Walmsley2020'
+WALMSLEY2020_COLOURS = {'sleep':'blue', 
+                       'sedentary': 'red',
+                       'light': 'darkorange',
+                       'moderate-vigorous': 'green'}
+WALMSLEY2020_LABELS = list(WALMSLEY2020_COLOURS.keys())
 
 IMPUTED_COLOR = '#fafc6f'  # yellow
 UNCODEABLE_COLOR = '#d3d3d3' # lightgray
@@ -36,26 +50,14 @@ def buildLabelDict(labelDictCSV, labelDictCol):
     return labelDict
 
 
-def fixTsData(tsData):
-    """ Parse column name containing metadata to infer time, create time index and rename the column """
-
-    meta = tsData.columns[0]  # this column name contains the period and sample rate
-    _, startDate, endDate, _ = meta.split(' - ')
-    sampleRate = meta.split("sampleRate = ")[1].split(" ")[0]
-
-    tsData.index = pd.date_range(start=startDate, end=endDate, freq=str(sampleRate) + 's')
-    tsData.rename({meta:'acceleration'}, axis='columns', inplace=True)  # rename the verbose column
-
-
 def annotateTsData(tsData, annoData, labelDict):
     tsData['annotation'] = 'undefined'
-    # tsData['annotation_label'] = 'undefined'
 
+    t = tsData['time'].dt.tz_localize(None)
     for i, row in annoData.iterrows():
         start, end = row['startTime'].tz_localize(None), row['endTime'].tz_localize(None)
         label = labelDict.get(row['annotation'], 'uncodeable')
-        tsData.loc[(tsData.index > start) & (tsData.index < end), 'annotation'] = label
-        # tsData.loc[(tsData.index > start) & (tsData.index < end), 'annotation_label'] = label
+        tsData.loc[(t > start) & (t < end), 'annotation'] = label
 
 
 def gatherPredictionLabels(tsData, labels):
@@ -171,8 +173,8 @@ def plotTimeSeries(tsData, labels, labelColors=None, plotFile='sample'):
     # create a 'patch' for each legend entry
     legend_patches = []
     legend_patches.append(mlines.Line2D([], [], color='k', label='acceleration'))
-    legend_patches.append(mpatches.Patch(facecolor=IMPUTED_COLOR, label='imputed'))
-    legend_patches.append(mpatches.Patch(facecolor=UNCODEABLE_COLOR, hatch='//', label='uncodeable'))
+    legend_patches.append(mpatches.Patch(facecolor=IMPUTED_COLOR, label='imputed/nonwear'))
+    legend_patches.append(mpatches.Patch(facecolor=UNCODEABLE_COLOR, hatch='//', label='not in dictionary'))
     # create legend entry for each label
     for label in labels:
         legend_patches.append(mpatches.Patch(facecolor=labelColors[label], label=label, alpha=0.5))
@@ -228,24 +230,43 @@ def plotConfusionMatrix(cm, cmLabels, title=None, plotFile='sample'):
     print('Confusion matrix plot file:', plotFile)
 
 
-def main(tsFile, annoFile, activityModel, normalize, plotFile):
-    tsData = pd.read_csv(args.tsFile)
-    date_parser = lambda ts: pd.to_datetime([s[:-4] for s in ts])
-    annoData = pd.read_csv(args.annoFile, parse_dates=['startTime', 'endTime'],
-        date_parser=date_parser)
+def date_parser(t):
+    ''' Parse date a date string of the form e.g
+    2020-06-14 19:01:15.123+0100 [Europe/London] '''
+    # tz = re.search(r'(?<=\[).+?(?=\])', t)
+    # if tz is not None:
+    #     tz = tz.group()
+    t = re.sub(r'\[(.*?)\]', '', t)
+    # return pd.to_datetime(t, utc=True).tz_convert(tz)
+    return pd.to_datetime(t, utc=True)
 
-    if activityModel.endswith("doherty2018.tar"):
-        labelColors = DOHERTY_NatComms_COLOURS
-        labelDict = buildLabelDict(ANNO_LABEL_DICT, DOHERTY_NatComms_DICT_COL)
-        labels = DOHERTY_NatComms_LABELS
-    elif activityModel.endswith("willetts2018.tar"):
-        labelColors = WILLETS_SciReports_COLOURS
-        labelDict = buildLabelDict(ANNO_LABEL_DICT, WILLETS_SciReports_DICT_COL)
-        labels = WILLETS_SciReports_LABELS
 
-    fixTsData(tsData)
+def main(tsFile, annoFile, labelScheme, normalize, plotFile):
+    annoData = pd.read_csv(args.annoFile, parse_dates=['startTime', 'endTime'])
+    tsData = pd.read_csv(args.tsFile, parse_dates=['time'], date_parser=date_parser)
+
+    # some minor refactoring
+    tsData.rename(columns={'acc':'acceleration', 'MVPA':'moderate-vigorous'}, inplace=True)
+    tsData.set_index('time', drop=False, inplace=True)
+
+    if labelScheme == 'Doherty2018':
+        labelColors = DOHERTY2018_COLOURS
+        labelDict = buildLabelDict(ANNO_LABEL_DICT, DOHERTY2018_DICT_COL)
+        labels = DOHERTY2018_LABELS
+    elif labelScheme == 'Willetts2018':
+        labelColors = WILLETTS2018_COLOURS
+        labelDict = buildLabelDict(ANNO_LABEL_DICT, WILLETTS2018_DICT_COL)
+        labels = WILLETTS2018_LABELS
+    elif labelScheme == 'Walmsley2020':
+        labelColors = WALMSLEY2020_COLOURS
+        labelDict = buildLabelDict(ANNO_LABEL_DICT, WALMSLEY2020_DICT_COL)
+        labels = WALMSLEY2020_LABELS
+    else:
+        raise ValueError(f'Unrecognized label scheme {labelScheme}')
+
     annotateTsData(tsData, annoData, labelDict)
     gatherPredictionLabels(tsData, labels)
+
     # smooth acceleration
     tsData['acceleration'] = tsData['acceleration'].rolling(window=12, min_periods=1).mean()
     # drop dates without any annotation
@@ -266,10 +287,10 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('tsFile', help='time series file with predictions by the model')
     parser.add_argument('annoFile', help='camera annotation file')
-    parser.add_argument('--activityModel', default='doherty2018.tar')
+    parser.add_argument('--labelScheme', default='Walmsley2020')
     parser.add_argument('--normalize', action='store_true')
     parser.add_argument('--plotFile', default='image.png')
     args = parser.parse_args()
 
     args.plotFile = args.plotFile.split('.')[0]  # remove any extension
-    main(args.tsFile, args.annoFile, args.activityModel, args.normalize, args.plotFile)
+    main(args.tsFile, args.annoFile, args.labelScheme, args.normalize, args.plotFile)
