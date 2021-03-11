@@ -57,6 +57,7 @@ def annotationSimilarity(anno1, anno2):
 def nearestAnnotation(annoList, annoTarget, threshold=.8):
     similarities = [annotationSimilarity(annoTarget, _) for _ in annoList]
     if np.max(similarities) < threshold:
+        print(f"No similar annotation found in dictionary for: '{annoTarget}'")
         return None
     return annoList[np.argmax(similarities)]
 
