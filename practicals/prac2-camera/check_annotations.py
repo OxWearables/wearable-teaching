@@ -115,13 +115,15 @@ def splitByTimeGap(group, seconds=30):
     return subgroups
 
 
-def confusionMatrix(tsData, labels, normalize=False):
+def confusionMatrix(tsData, labels, normalize=False, include_uncodeable_imputed=False):
     tsData = tsData.loc[tsData['annotation'] != 'undefined']
     y_true = tsData['annotation'].values
     y_pred = tsData['prediction'].values
 
     # Compute confusion matrix -- include 'uncodeable' & 'imputed'
-    cmLabels = labels + ['uncodeable', 'imputed']
+    cmLabels = labels
+    if include_uncodeable_imputed:
+        cmLabels += ['uncodeable', 'imputed']
     cm = confusion_matrix(y_true, y_pred, labels=cmLabels)
     if normalize:
         cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
