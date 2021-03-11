@@ -44,6 +44,23 @@ UNCODEABLE_COLOR = '#d3d3d3' # lightgray
 BACKGROUND_COLOR = '#d3d3d3' # lightgray
 
 
+def annotationSimilarity(anno1, anno2):
+    ''' Naive sentence similarity '''
+    DELIMITERS = ";|, | "
+    words1 = re.split(DELIMITERS, anno1)
+    words2 = re.split(DELIMITERS, anno2)
+    shared_words = set(set(words1) & set(words2))
+    similarity = len(shared_words) / len(words1)  # why words1 and not words2? how about averaging?
+    return similarity
+
+
+def nearestAnnotation(annoList, annoTarget, threshold=.8):
+    similarities = [annotationSimilarity(annoTarget, _) for _ in annoList]
+    if np.max(similarities) < threshold:
+        return None
+    return annoList[np.argmax(similarities)]
+
+
 def buildLabelDict(labelDictCSV, labelDictCol):
     df = pd.read_csv(labelDictCSV, usecols=['annotation', labelDictCol])
     labelDict = {row['annotation']:row[labelDictCol] for i,row in df.iterrows()}
@@ -56,7 +73,8 @@ def annotateTsData(tsData, annoData, labelDict):
     t = tsData['time'].dt.tz_localize(None)
     for i, row in annoData.iterrows():
         start, end = row['startTime'].tz_localize(None), row['endTime'].tz_localize(None)
-        label = labelDict.get(row['annotation'], 'uncodeable')
+        annotation = nearestAnnotation(list(labelDict.keys()), row['annotation'])
+        label = labelDict.get(annotation, 'uncodeable')
         tsData.loc[(t > start) & (t < end), 'annotation'] = label
 
 
