@@ -59,42 +59,68 @@ Please take a moment to go through the following background information before y
 
 
 ### Camera
+The camera is really helpful to get a better understanding of all the different activities you are involved in during the course of a day. The camera does not record continuously, but takes a photo every 30 seconds.
+
 ![](./figs/person_w_cam.png) ![](./figs/autographer.png)
 
+
+#### Instructions
+* We kindly ask you to wear the camera for 2 consecutive days, at 3 different timepoints. When you decide to wear the camera the next day, make sure the camera is fully charged.
+* We kindly ask you to wear the camera for all activities on those days, both at home and outside.
+* You are free to take off or pause the device at any time, without giving a reason. However, please do put the device back on as soon as possible afterwards.
 * Wear the camera around your neck so that it feels comfortable. The camera unit should be at chest height with the lens facing horizontally forwards.
 * The height can be adjusted with the black cord (lanyard).
 * Wear the camera outside of your clothes and be careful that your coat doesn’t obscure the lens!
 * There is also a clip, if you prefer to attach the camera to clothes.
-* Do not get the camera wet.
-* The camera is not suitable for prolonged running or jogging or other very energetic activities.
-* The camera does not recrord any sounds, voices or conversations.
-* All images should be treated with the strictest confidence and you will be given the option to review and delete any or all images before analysis
-* Do not treat the device as a hand-held camera or attempt to capture specific angles.
-* The lens cover can be rotated to give privacy when required. You do not need to turn the camera off. Remember to turn the lens cover back to allow images to be taken once you no longer need privacy. Some people find it easier to hide the camera under their clothing or in a pocket for short periods of privacy.
-* Please take off and charge the camera during sleep.
+* Try not get the camera wet.
+* Make sure to charge the camera after you’ve used it for one day.
 
 In a typical day of wear, the camera may take up to 3,000 images depicting your everyday life, where you go and the kinds of activities you engage in (e.g. walking to the shop, cycling, socialising). Some images are displayed below for you to get an idea of the content and quality of images that are recorded:
 
+
+
+#### Disclaimer
+* The camera does not record any sounds, voices or conversations.
+* All images will be treated with the strictest confidence and you will be given the option to review and delete any or all images before analysis.
+* Over the course of the data collection day you may forget you are wearing the camera and take images that are too personal, unwanted or unflattering. At the end of the period for which you are wearing the camera, you will have the opportunity to view and, if necessary, delete any images that you do not wish to be included in the study.
+
+
+#### Ethics information on wearable cameras
+The data collected will be anonymised and stored on a password-protected computer and any researchers using the data will have been trained in the ethical handling of such data.  In a typical day of wear, the camera may take up to 3,000 images depicting your everyday life, where you go and the kinds of activities you engage in (e.g. walking to the shop, cycling, socialising). Some images are displayed below for you to get an idea of the content and quality of images that are recorded:
+
 ![](./figs/camera_photos.png)
 
-You are free to take off or pause the device at any time, without giving a reason. You should not feel obliged to wear the device in situations where wearing it may make you (or others) feel uncomfortable. If others around you feel uncomfortable with you wearing the camera, you should offer to remove or temporarily switch it off. Places where wearing the camera may not be appropriate include changing rooms, swimming pools, or in and around schools. Data of illegal activities may not be protected by confidentiality and may be passed to law enforcement. The camera does not record sound, voices, or conversations, so your privacy is assured in this regard.
+The devices are encrypted (‘scrambled’) so that the data can only be accessed by members of the research team. This restricts participants and/or third parties to access the images or make sense of them. Data of illegal activities may not be protected by confidentiality and may be passed to law enforcement. The camera does not record sound, voices, or conversations, so your privacy is assured in this regard.
 
-We recommend that you check in advance that friends, family, and co-workers understand the nature of the study and are happy for you to take part. Their behaviour will not be reported as part of the research and images of them will never be shown without your and their written permission. They are welcome to contact the research team if they have any questions or concerns. If you are worried that the camera may have taken images of others that they would feel uncomfortable with, both you and the third party are free to request for those images to be deleted without giving any reason.
+It is important for you to understand that you are free to take off or pause the device at any time, without giving a reason. Pausing the camera for brief intervals throughout the day will not affect your input to the study. You should not feel obliged to wear the device in situations where wearing it may make you (or others) feel uncomfortable. If others around you feel uncomfortable with you wearing the camera, you should offer to remove or temporarily switch it off. Places where wearing the camera may not be appropriate include changing rooms, swimming pools, or in and around schools.  
 
-Over the course of the data collection day you may forget you are wearing the camera and take images that are too personal, unwanted or unflattering. At the end of the period for which you are wearing the camera, you will have the opportunity to view and, if necessary, delete any images that you do not wish to be included in the study. You will have the option of doing this either in private or with the help of a researcher. As the images are research data, you will not be able to keep any copies of the images.
+We recommend that you check in advance that friends, family, and co-workers understand the nature of the study and are happy for you to take part. Their behavior will not be reported as part of the research and images of them will never be shown without your and their written permission. They are welcome to contact the research team if they have any questions or concerns. If you are worried that the camera may have taken images of others that they would feel uncomfortable with, both you and the third party are free to request for those images to be deleted without giving any reason.
+
+Over the course of the data collection day you may forget you are wearing the camera and take images that are too personal, unwanted or unflattering. At the end of the period for which you are wearing the camera, you will have the opportunity to view and, if necessary, delete any images that you do not wish to be included in the study.
+
+
+#### Where and when can I wear the camera?
+We are interested in recording your daily activities so we would like you to wear the camera as much as possible during your waking hours for one day. Once you have woken and showered, put on the camera. Please keep it on until you start preparing for bed that evening; you do not have to wear it whilst you are sleeping. You should not wear the camera while you or others are changing or undressing.
+
+We appreciate that in some places (e.g. hospitals or airports) it may not be appropriate to wear the camera and you should feel free to remove it at any time. You do not need to wear the camera while participating in contact or water based sports (e.g. rugby or swimming), although we would like you to record your journey there and back.
+
 
 #### Personal safety
-Remove the camera in any situation where you feel unsafe. For example, if you happen to be out on your own late at night, you may prefer to hide the camera to avoid unwanted attention. If someone tries to take the camera off you do not attempt to stop them.
+Remove the camera in any situation where you feel unsafe. For example, if you happen to be out on your own late at night, you may prefer to hide the camera to avoid unwanted attention. If someone tries to take the camera off you, do not attempt to stop them.
 
 If you are engaged in certain manual tasks or using machinery the camera sometimes swings around. For example, if you are using gardening machinery, we advise you remove the device until the activity is finished to avoid discomfort or the possibility of the device getting caught in a dangerous way.
+
+
+
+#### Privacy
+The lens cover can be rotated to give privacy when required. You do not need to turn the camera off. Remember to turn the lens cover back to allow images to be taken once you no longer need privacy. Some people find it easier to hide the camera under their clothing or in a pocket for short periods of privacy.
+
+![](./figs/person_w_cam.png) ![](./figs/autographer.png)
+
 
 #### Do I have to collect my own data?
 You are of course free to decide whether or not to collect your own data. There will be no penalty to you for not doing so.
 
-#### Where and when should and shouldn’t I wear the camera?
-This is a good opportunity to collect your daily activities so we encourage you to wear the camera as much as possible during your waking hours for one day. Once you have woken and showered put on the camera. Please keep it on until you start preparing for bed that evening; you do not have to wear it whilst you are sleeping. You should not wear the camera while you or others are changing or undressing.
-
-We appreciate that in some places (e.g. hospitals or airports) it may not be appropriate to wear the camera and you should feel free to remove it at any time. You do not need to wear the camera while participating in contact or water based sports (e.g. rugby or swimming), although it would be good to record your journey there and back.
 
 #### What are the possible disadvantages of collecting this data?
 We do not anticipate any significant effects on your lifestyle. If you do not want to answer any of the questions in the questionnaire or interview you do not have to. You will also be able to check and delete any images taken prior to anyone viewing the images. However, it is possible that while wearing the camera you may be asked about the device by members of the public. In this case we suggest that you say the following:
@@ -191,19 +217,20 @@ $ python3 autographer.py --setTime True
 * You can now safely unplug the device.
 
 
-<!-- collect your devices from Catherine (desk G065) who will set up your accelerometer for you. Fill in this form to register the IDs of your devices. [todo]  -->
+#### Camera operating instructions
 
-
-
-### Camera operating instructions
-| Turn on / off       | Press the “ACTION” button to the side of the device for a few seconds. The screen will say 'hello'/ 'goodbye'. |
+| Action | Description |
 | ------------- |:-------------:|
-| Camera Status      | Press the “MENU” button for an update on the battery status, number of pictures taken, and amount of memory space used. |
+| Turn on / off | Press the “ACTION” button to the side of the device for a few seconds. The screen will say 'hello'/ 'goodbye'. |
+| Camera Status | Press the “MENU” button for an update on the battery status, number of pictures taken, and amount of memory space used. |
 
 
 Turn the camera on, and check that only the screen below shows when pressing the 'Menus' button:
 
 ![](./figs/camera_screen.png)
+
+<!-- collect your devices from Catherine (desk G065) who will set up your accelerometer for you. Fill in this form to register the IDs of your devices. [todo]  -->
+
 
 
 
