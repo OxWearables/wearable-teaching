@@ -99,7 +99,7 @@ The overall flow is [described in great detail here](https://github.com/activity
 
   * For instance this split is where I think the participant has started locking up their bike.
 
-![](./figs/EDNitOT.png){ width=650px }
+![](./figs/EDNitOT.png)
 
 
 2. Look at consecutive images to determine the most suitable label for each image sub-sequence. You can also make use of the search bar if you are unsure where the labels are located in the hierarchy.
@@ -139,7 +139,7 @@ Open your annotations file at `~/Development/wearable-teaching/practicals/data/m
 
 Do the following if you notice that there are other events in your time series which you have annotated but appears to be 'uncodeable' in your plot.
 
-Open the labels file at `~/Development/wearable-teaching/practicals/data/prac3_process_camera/label-dictionary.csv` and manually append the table.
+Open the labels file at `~/Development/wearable-teaching/practicals/data/prac2-camera/label-dictionary.csv` and manually append the table.
 
 For example, 'leisure;recreation;outdoor;15533 rock or mountain climbing' is not currently in the label dictionary. Append the table, putting 'leisure;recreation;outdoor;15533 rock or mountain climbing' in the 'annotation' column, and a category which you feel is appropriate under the 'NatComms-label-simplified' column (in this case I've assigned the latter as moderate):
 
