@@ -1,56 +1,53 @@
 # Practical 3: Processing accelerometer data
 In this practical, you will process data collected from your accelerometer.
 
+## 0. Tools needed 
+* [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) /[Virtualenv](https://docs.python-guide.org/dev/virtualenvs/) to manage depedencies
+* Java 8+: Download jdk-17 [here](https://www.oracle.com/java/technologies/downloads/#jdk17-mac). If you are on a Mac machine,
+make sure to select the right distribution for the chip you have. For m1 chips, get arm64. For intel chips, get x64. 
 
 ## 1. Setup and installation
-First need to get some scripts for the pre-processing of your accelerometer data. You can install the below package anywhere you like e.g. ~/Development/
+First we need to install package that can pre-process your accelerometer data. To do this, activate your virtual environment 
+either using conda or virtualenv.
 
-```
-$ git clone https://github.com/activityMonitoring/biobankAccelerometerAnalysis.git
-$ cd biobankAccelerometerAnalysis
-$ bash utilities/downloadDataModels.sh
-$ python3 -mpip install --user .
-$ javac -cp java/JTransforms-3.1-with-dependencies.jar java/*.java
-```
-
-If you did not have JDK installed, you would not be able to run the last command. In this case, you should follow these instructions to install it.
-
-<!-- * Create an Oracle account [here]() -->
-
-* Download jdk-13.0.2_osx-x64_bin.dmg (macOS, 173MB) [here](https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-5672538.html). Make sure you accept the License Agreement. This will take ~10 minutes.
-
-* Run the installer. Check that you've installed it properly by typing this in your terminal and you should see the java version installed.
-
-```
-$ javac --version
+### Conda activation
+```shell
+$ conda create -n acc_parsing
+$ conda activate acc_parsing
 ```
 
+or virtualenv activation
+```shell
+$ mkdir test_baa/ ; cd test_baa/
+$ python -m venv baa
+$ source baa/bin/activate
+```
 
+Once your envrionment has been activated, install the package using `pip`:
+```shell
+$ pip install accelerometer
+```
 
 ## 2. Extracting data
 We can now extract the raw data from your devices.
 
 ### Accelerometer
-* Plug in your accelerometer to your computer. Go to the external drive where it is located and copy the .CWA drive over to your `...biobankAccelerometerAnalysis/data/` folder and rename the file as `myAcc.cwa`.
+* Plug in your accelerometer to your computer. Go to the external drive where it is located and copy the .CWA drive 
+over wherever you want. Rename the file as `myAcc.cwa`.
 
 ```
-$ cp /Volumes/AX317_41145/CWA-DATA.CWA ~/Development/biobankAccelerometerAnalysis/data/myAcc.cwa
+$ mkdir ~/acc_data
+$ cp /Volumes/AX317_41145/CWA-DATA.CWA ~/wearable-teaching/practicals/data/myAcc.cwa
 ```
 
 * **Safely disconnect the device and put your accelerometer back on!**
 
-* Currently the raw data stored in the CWA file does not allow easy extraction of the 3-axis acceleration data, so we need to convert this to a more suitable format such as CSV for furthur manipulation. Run the following (you're still expected to be in the `biobankAccelerometerAnalysis` folder.)
-
+* Currently the raw data stored in the CWA file does not allow easy extraction of the 3-axis acceleration data, so we need to convert this to a more suitable format such as CSV for furthur manipulation. 
+Run the following in your `praticals` folder:
 ```
-$ python3 accProcess.py data/myAcc.cwa --rawOutput True --activityClassification False --deleteIntermediateFiles False
+$ cd ~/wearable-teaching/practicals
+$ accProcess.py data/myAcc.cwa --rawOutput True --activityClassification False --deleteIntermediateFiles False
 ```
-
-* Then move the converted file to your `practicals/data/` folder
-
-```
-$ mv data/myAcc.csv.gz ~/Development/wearable-teaching/practicals/data/
-```
-
 
 
 ## 3: Preprocessing
@@ -71,17 +68,16 @@ While you have had a taste of raw sensor data preprocessing through the jupyter 
 
 So instead of using the dataset you just created, `my_data.csv`, we will now go back to your raw data again - the CWA file. We will run some scripts which form the standard analysis pipeline on accelerometer data in the Biobank studies such as [this paper](https://www.nature.com/articles/s41467-018-07743-4). This involves preprocessing operations as well as running a machine learning model that had been trained on the Biobank data for activity recognition.
 
-Note that these operations also involve mapping the fine-grained annotations you had into larger classes.
-Run this from your `biobankAccelerometerAnalysis` directory.
+Note that these operations also involve mapping the fine-grained annotations you had into larger classes. You shall still be in the `pratical` folder.
 
 ```
-$ python3 accProcess.py ../../data/myAcc.cwa --useFilter False
+$  accProcess.py data/myAcc.cwa --useFilter False
 ```
 
 To visualise the time series and activity classification output:
 
 ```
-$ python3 accPlot.py ../../data/myAcc-timeSeries.csv.gz ../../data/plot.png
+$ accPlot.py data/myAcc-timeSeries.csv.gz data/plot.png
 ```
 
 
@@ -90,15 +86,13 @@ $ python3 accPlot.py ../../data/myAcc-timeSeries.csv.gz ../../data/plot.png
 Now unzip your `.csv.gz` file if you haven't done so already.
 
 ```
-gunzip ../../data/myAcc-timeSeries.csv.gz
+gunzip data/myAcc-timeSeries.csv.gz
 ```
 
-
-**Hang to update this small section**
 Finally, we want to check the model predictions against your true annotations.
 
 ```
-$ cd ../../prac3
+$ cd prac3
 $ python3 check_annotations.py ../data/myAcc-timeSeries.csv ../data/me-annotation.csv --plotFile check_results.png
 ```
 
@@ -160,7 +154,7 @@ You should have loaded your images onto your computer by now so you can safely d
 Plug your camera in, and navigate to the `utilities` folder within `oxford-wearable-camera-browser` and type the following:
 
 ```
-$ cd ~/Development/oxford-wearable-camera-browser/utilities/
+$ cd ~/oxford-wearable-camera-browser/utilities/
 $ python3 autographer.py --delete True
 ```
 
