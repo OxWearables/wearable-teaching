@@ -156,8 +156,7 @@ parameters which might be different from the setup manual:
 
 
 ### Accelerometer
-Your accelerometer has already been set up to record data at 100Hz. The local time of the accelerometer has been synced to Hang's computer.
-
+On a Mac, using the https://config.openmovement.dev/ setup page, set the sampling rate to 100 Hz, the range to +/- 8 g and the start time for immediately in the next few moments. You can set the duration for a specific number of hours, or leave the duration at the default 168 hours to ensure you are recording acceleration from the accelerometer for the entire time you are wearing the wearable camera. This web interface sometimes does not work. If that is the case, try someone else's computer, or Scott or Hang will help you set up on their machine. The local time of the accelerometer will be synced to the machine you set it up on. 
 
 ### Camera
 
@@ -238,6 +237,7 @@ Turn the camera on, and check that only the screen below shows when pressing the
 
 Please perform the following sets of activities for 5 minutes each. -->
 
+Your camera should be fully charged at the start of this practical, but we recommend you check the battery percentage by pressing the MENU button. If the battery percentage becomes low during your data collection, please charge the camera with a micro-USB cable.
 
 # 4. Collecting your own data in-the-wild
 Now that you've set up the devices, you can go ahead with your day as normal to collect data! Please wear your devices for two days until Practical 3, when you will begin analysis and visualisation of your very own data!
