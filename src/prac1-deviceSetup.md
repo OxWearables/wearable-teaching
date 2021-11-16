@@ -167,7 +167,7 @@ This week, you will use [our group's wearable camera browser](https://github.com
 ```
 # 1. Download/clone this git repo
 $ cd ~/Development/
-$ git clone git@github.com:activityMonitoring/oxford-wearable-camera-browser.git
+$ git clone https://github.com/activityMonitoring/oxford-wearable-camera-browser.git
 
 # 2. Install nodeJS
 $ brew install node

@@ -18,15 +18,17 @@ $ conda activate acc_parsing
 
 or virtualenv activation
 ```shell
-$ mkdir test_baa/ ; cd test_baa/
-$ python -m venv baa
-$ source baa/bin/activate
+$ mkdir venvs/ ; cd venvs/
+$ python -m venv acc_parsing
+$ source acc_parsing/bin/activate
 ```
 
 Once your envrionment has been activated, install the package using `pip`:
 ```shell
 $ pip install accelerometer
 ```
+You should keep your environment active for the remaining for the pratical.
+
 
 ## 2. Extracting data
 We can now extract the raw data from your devices.
