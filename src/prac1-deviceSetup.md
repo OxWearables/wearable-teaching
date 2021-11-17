@@ -154,6 +154,8 @@ parameters which might be different from the setup manual:
 2. Change the start date to today.
 3. Leave the rest to the default settings.
 
+![](./figs/ax_config.jpg)
+
 
 ### Accelerometer
 On a Mac, using the https://config.openmovement.dev/ setup page, set the sampling rate to 100 Hz, the range to +/- 8 g and the start time for immediately in the next few moments. You can set the duration for a specific number of hours, or leave the duration at the default 168 hours to ensure you are recording acceleration from the accelerometer for the entire time you are wearing the wearable camera. This web interface sometimes does not work. If that is the case, try someone else's computer, or Scott or Hang will help you set up on their machine. The local time of the accelerometer will be synced to the machine you set it up on. 
