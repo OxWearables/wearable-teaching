@@ -55,7 +55,7 @@ $ accProcess.py data/myAcc.cwa --rawOutput True --activityClassification False -
 ## 3: Preprocessing
 In this practical, we will focus on the preprocessing steps performed on your accelerometer data for activity recognition. This is an often time-consuming, yet very important, step before your data is useful for further analysis. You are provided with a half-completed jupyter notebook to work with.
 
-After this you will our built pipeline and perform activity recognition on your accelerometer data with machine learning.
+After this you will use our built pipeline and perform activity recognition on your accelerometer data with machine learning.
 
 
 ## Buillding features from your accelerometer traces
@@ -101,7 +101,7 @@ $ python3 check_annotations.py ../data/myAcc-timeSeries.csv ../data/me-annotatio
 Inspect `plot.png` in your `data` folder and various `.png` generated in your `prac3` folder to see how the model has done!
 
 
-# 4. Visualising your data
+# 4. Visualising your data (optional)
 For this practical, we wish for you to produce some visualisations to share in a presentation. This practical is open-ended in nature, you can explore any topic as the basis of your visualisation according to your interests.
 
 ## Timeline
@@ -142,12 +142,6 @@ If none of the above visualisations inspire you, feel free to propose and pursue
  * Compare the different annotation schema you had used
 
  * Look into the distribution of activities in your data
-
-
-**Handin:** Prepare a ‘freestyle’ visualisation of your data. Work as a group and prepare 3 slides which need to be sent to Hang by 2pm on Friday.
-At 3pm on Friday, each group will then present their 3 slides (6 minutes).
-
-
 
 
 ## 5. Returning your camera and accelerometer
