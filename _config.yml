@@ -1,6 +1,6 @@
 title: Wearables Machine Learning praticals
 author:  Oxford Wearables Group
-url: https://github.com/activityMonitoring/wearable-teaching/github.io # root address of the site
+url: https://activitymonitoring.github.io/wearable-teaching/ # root address of the site
 description: > # description of the site (multiple lines allowed)
  This is a tutorial series for machine learning in wearables. In this tutorial series, we will walk through 
  the whole life-cycle of a real-world machine learning project which consists of data collection, annotation, 
