@@ -1,22 +1,16 @@
-# CDT-Wearable-Teaching
+# Machine learning tutorials for wearables devices
 
-`src` stores raw `.md` files for editing the practical instructions;
-`practicals` stores files given to students in their CDT server.
+## How to edit
+Editing is super simple. All you need to do is to edit the relevant readme files in `_posts` and push to the remote. Then the web page will be updated. 
 
-## Creating `.pdf` instruction files
+## How to build the tutorials locally?
+Building the website locally will need some time. You can follow the instructions [here](https://jekyllrb.com/docs/installation/). Unless you want to make structural changes to the repo, there is no need to do this step.
 
-The `src` folder contains practical sheets for students in `.md` format.
-
-To turn them into pdfs, one should use grip.
-
-```bash
-pip install grip
-grip src/prac1-deviceSetup.md --export
+After you have installed Jekyll, do the following 
+```shell
+bundle exec jekyll serve
 ```
+The tutorials will be live on `localhost:4000`. You might want to do `bundle add webrick` if you have Ruby>=3.0.0.
 
-This will create a web page which you can use to print as PDF.
 
-## Sample files in case data collection fails
-
-There is a two-day camera and accelerometer data for people to use in the future in case for some reason the students cannot collect or fail to collect their own data. This data was collected in Mar, 2021 and is being stored in rescomp under `/well/doherty/projects/stuff/teaching`.
-
+For prac1, the reference data is stored on rescomp at `/well/doherty/projects/stuff/teaching`.
