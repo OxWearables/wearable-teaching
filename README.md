@@ -8,7 +8,10 @@ Building the website locally will need some time. You can follow the instruction
 
 After you have installed Jekyll, do the following 
 ```shell
-bundle exec jekyll serve
+bin/boostrap
+
+# start live view
+bin/start
 ```
 The tutorials will be live on `localhost:4000`. You might want to do `bundle add webrick` if you have Ruby>=3.0.0.
 

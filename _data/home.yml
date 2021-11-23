@@ -18,7 +18,7 @@ project_entries:
     desc: Data processing
 
   - title: Practical 3
-    url: prac3-activityRecognition
+    url: prac3-activity-classification
     desc: Model development
 
 
