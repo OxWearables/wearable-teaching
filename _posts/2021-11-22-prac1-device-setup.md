@@ -2,26 +2,29 @@
 layout: post
 ---
 
-# Practical 1: Fundamentals of Sensing, Setting up devices
+# Fundamentals of Sensing, Setting up devices
 
 ### Overview
 Over the next few of days, you will be collecting and analysing your own physical activity data using two devices: a wearable camera and a wrist-mounted accelerometer.
 
 By going through this practical, we hope that you will learn more about how innovative technologies such as wearable cameras and accelerometers are being used in health and social research. You might also find it interesting to see how many different activities you do in a day and where you spend the majority of your time.
 
-Our road map this week will be:
+Our road map of this week will be:
 
 1. Set up devices and collect your own data.
 2. Extract and annotate wearable camera data.
 2. Extract and annotate accelerometer data.
-4. Time-series analysis, machine learning activity classification, and data visualisation.
+4. Conduct time-series analysis, machine learning activity classification, and data visualisation.
 
 ![](./assets/figs/sample_image_timeseries.png)
 
 ### Today
-In this practical, we'll go through how to set up your devices, collect, and extract data from an accelerometer and wearable camera. At the end of the practical, you will begin wearing your devices and collecting your own personal activity data. In a later practical, you will annotate and analyse this data of your own.
+In this practical, we will set up your devices to collect data and learn how to annotate the camera images. By the end of the practical, you will be wearing your devices for one whole day until Practical 2, when you will begin analysis and visualisation of your very own data. **Before you start, please download the practical materials that you will use for the rest of the week [here](./assets/practicals.zip)**. We will assume the practicals folder is placed in your home directory. If you don't know where your home directory is, you can run `echo $HOME` in your terminal to find out. You can move on to the next section, if get similar output by running `ls ~/practicals`:
 
-In this practical, we will set up your devices to collect data and learn how to annotate the camera images. By the end of the practical, you will be wearing your devices for one whole day until Practical 2, when you will begin analysis and visualisation of your very own data. **Before you start, please download the pratical materials that you will use for the rest of the week [here](./assets/practicals.zip)**. We will assume the praticals folder is placed in your home directory.
+```shell
+(base) hangy@NDPH8334 ~ % ls ~/practicals 
+assets	data	scripts
+```
 
 
 # 1. About your study
@@ -32,7 +35,7 @@ The text is chiefly about the wearable camera and has been adapted from an infor
 
 ### Camera
 The wearable camera is designed to capture first-person perspective images to log participant behaviour and activity. This camera does not take video or audio, but captures still images approximately every 30 seconds. Annotation of accelerometer data with ground-truth images from a wearable camera is crucial for accurate annotation of accelerometer data and for understanding the activities a participant is involved in during the course of a day in preparation for classification model generation. 
-![](./assets/figs/person_w_cam.png) ![](./assets/figs/autographer.png)
+
 
 ## 1.1 Camera
 The camera is really helpful to get a better understanding of all the different activities you are involved in during the course of a day. The camera does not record continuously, but takes a photo every 30 seconds.
@@ -302,11 +305,7 @@ In this section, you will learn how to process the camera data using a reference
 
 
 ## 4.1 Setup and installation
-<<<<<<< HEAD
-Navigate to the `oxford-wearable-camera-browser` folder that you installed in the previous sectioin.
-=======
 Navigate to the `oxford-wearable-camera-browser` folder that you installed in the previous section.
->>>>>>> 0b618f06f7a457449964f2c22d926ea3360330e4
 
 ###  Folder structure
 We will now walk through how the browser reads in the images for annotation. Our setup has created a new directory in your root folder at `/Users/{yourName}/OxfordImageBrowser/`, this further contains 3 folders: `annotations`,`images`, `schema`.
