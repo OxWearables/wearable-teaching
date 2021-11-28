@@ -6,14 +6,14 @@ layout: post
 # Practical 2: Processing accelerometer data
 In this practical, you will process data collected from your accelerometer.
 
-## 0. Tools needed 
+## Tools needed 
 * [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) /[Virtualenv](https://docs.python-guide.org/dev/virtualenvs/) to manage depedencies
 * Java 8+: Download jdk-17 [here](https://www.oracle.com/java/technologies/downloads/#jdk17-mac). If you are on a Mac machine,
 make sure to select the right distribution for the chip you have. For m1 chips, get arm64. For intel chips, get x64. 
 
 ## 1. Setup and installation
-First we need to install package that can pre-process your accelerometer data. To do this, activate your virtual environment 
-either using conda or virtualenv.
+First we need to install a package that can pre-process your accelerometer data. To do this, activate your virtual environment either using conda or virtualenv.
+
 
 ### Conda activation
 ```shell
@@ -36,7 +36,7 @@ You should keep your environment active for the remaining for the pratical.
 
 
 ## 2. Extracting data
-We can now extract the raw data from your devices.
+We will now extract the raw data from your accelerometer device.
 
 ### Accelerometer
 * Plug in your accelerometer to your computer. Go to the external drive where it is located and copy the .CWA drive 

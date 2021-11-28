@@ -24,7 +24,7 @@ Our road map will look like this:
 3. Camera setup
 4. Camera image annotation
 
-In this practical, we will set up your devices to collect data and learn how to annotate the camera images. By the end of the practical, you will be wearing your devices for one whoe day until Practical 2, when you will begin analysis and visualisation of your very own data. **Before you start, please download the pratical materials that you will use for the rest of the week [here](./assets/practicals.zip)**. We will assume the praticals folder is placed in your home directory.
+In this practical, we will set up your devices to collect data and learn how to annotate the camera images. By the end of the practical, you will be wearing your devices for one whole day until Practical 2, when you will begin analysis and visualisation of your very own data. **Before you start, please download the pratical materials that you will use for the rest of the week [here](./assets/practicals.zip)**. We will assume the praticals folder is placed in your home directory.
 
 
 # 1. About your study.
@@ -59,7 +59,7 @@ Over the course of the data collection day you may forget you are wearing the ca
 
 
 ## 1.2 Instructions
-* Wear the camera for one days, at 3 different timepoints. When you decide to wear the camera the next day, make sure the camera is fully charged.
+* Wear the camera for the rest of today and all of tomorrow. When you wear the camera tomorrow, make sure the camera is fully charged.
 * Wear the camera for all activities, both at home and outside.
 * You are free to take off or pause the device at any time, without giving a reason. However, please do put the device back on as soon as possible afterwards.
 * Wear the camera around your neck so that it feels comfortable. The camera unit should be at chest height with the lens facing horizontally forwards.
@@ -118,7 +118,7 @@ The accelerometer is robust and water-proof, and has been designed to be worn wh
 ## 2.1. Setting up the devices.
 Now collect your devices from your tutor, who will go through the accelerometer set-up with you.
 
-You should have been given one wearable camera (Vicon Autographer), 1 wrist-worn accelerometer (and 1 micro-USB cable).
+You will be given one wearable camera (Vicon Autograph), one wrist-worn accelerometer, and one micro-USB cable.
 For the Mac users, you can use the [Open Movement](https://config.openmovement.dev/) website to try setup but it might not
 always work. For the Windows users, you can download [OMGUI](https://github.com/digitalinteraction/openmovement/wiki/AX3-GUI)
 and follow the [instructions](./assets/pdfs/accSetup.pdf). Note that you should pay attention to several key
@@ -137,20 +137,18 @@ This web interface sometimes does not work. If that is the case, try someone els
 # 3. Camera
 
 ## 3.1 software requirements
-This week, you will use [our group's wearable camera browser](https://github.com/activityMonitoring/oxford-wearable-camera-browser). Here are the steps, including the installation of [Node.js](https://nodejs.org/en/), to get up and running with it.
+This week, you will use [our group's wearable camera browser](https://github.com/activityMonitoring/oxford-wearable-camera-browser). Here are the steps, including the installation of [Node.js](https://nodejs.org/en/), to get up and running with it. For node, you can either download it using the link before or do `brew install node` on Mac or `sudo apt install nodejs` on Linux. 
 
 ```
 # 1. Download/clone this git repo
 $ cd ~/
 $ git clone https://github.com/activityMonitoring/oxford-wearable-camera-browser.git
 
-# 2. Install nodeJS
-$ brew install node
+# 2. Install npm package dependencies
+$ npm install  # electron install might fail. Try run the next line.
+$ npm i -D electron@11.0.0
 
-# 3. Install npm package dependencies
-$ npm install
-
-# 4. Open/run browser
+# 3. Open/run browser
 $ npm start
 ```
 
@@ -218,7 +216,7 @@ In this section, you will learn how to process the camera data using a reference
 
 
 ## 4.1 Setup and installation
-Navigate to the `oxford-wearable-camera-browser` folder that you installed in the previouse sectioin.
+Navigate to the `oxford-wearable-camera-browser` folder that you installed in the previous sectioin.
 
 ###  Folder structure
 We will now walk through how the browser reads in the images for annotation. Our setup has created a new directory in your root folder at `/Users/{yourName}/OxfordImageBrowser/`, this further contains 3 folders: `annotations`,`images`, `schema`.
@@ -254,7 +252,7 @@ We will now walk through how the browser reads in the images for annotation. Our
 
 ## 4.2 Annotating a reference dataset
 
-Now you can open `OxfordImageBrowser` and annotate your own data based on the instructions in `annotation.pdf`.
+Now you can open `OxfordImageBrowser` and annotate your own data.
 
 * Start the image browser.
 
@@ -267,7 +265,7 @@ $ npm start
 
 * For each participant:
 
-    * Select the participant i.e. 
+    * Select the participant.
 
     * Select the annotation scheme `annotation.csv`
 
@@ -283,14 +281,9 @@ All previous annotators of the CAPTURE-24 dataset had to go through extensive tr
 
 The overall flow is [described in great detail here](https://github.com/activityMonitoring/oxford-wearable-camera-browser) where the essential elements are to:
 
-1. Divide up the images into different events/activities by clicking on the timeline above the images.
-
-  * To move event boundaries, click and drag the circles.
-
-  * For instance this split is where I think the participant has started locking up their bike.
-
 ![](./assets/figs/EDNitOT.png)
 
+1. Divide up the images into different events/activities by clicking on the timeline above the images: I) To move event boundaries, click and drag the circles. II) For instance this split is where I think the participant has started locking up their bike.
 
 2. Look at consecutive images to determine the most suitable annotation for each image sub-sequence. You can also make use of the search bar if you are unsure where the annotations are located in the hierarchy.
 
@@ -319,13 +312,13 @@ Copy the `my-annotations.csv` file over to your `~/practicals/data/` folder.
 
 In your resulting time-series file, you might notice that some of your annotations are 'uncodeable'. Here are some ways to fix this.
 
-1. Sleep
+* Sleep
 
 Do the following if you want your annotated time series to have 'sleep' events.
 
 Open your annotations file at `~/wearable-teaching/practicals/data/my-annotations.csv` and manually change the annotation of the events you believe correspond to your sleeping hours into `7030 sleeping`.
 
-2. Other Events
+* Other Events
 
 Do the following if you notice that there are other events in your time series which you have annotated but appears to be 'uncodeable' in your plot.
 
