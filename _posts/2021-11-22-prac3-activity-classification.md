@@ -2,7 +2,9 @@
 layout: post
 ---
 
-# Incomplete instructions - Practical 3: Activity recognition on the Capture24 dataset
+# Practical 3: Activity recognition on the Capture24 dataset
+In this practical, you will walk through a list of Jupyter notebooks to learn how to build activity classifiers using different models. The Jupyter notebooks can be found [here](https://github.com/activityMonitoring/Oxford_Wearables_Activity_Recognition). 
+
 
 ## Setup instructions in the VMs
 1. Load and initialize Anaconda. This needs to be done only once (you may not need to run this if you already see `(bash)` written in front of your prompt).
