@@ -14,7 +14,7 @@ Our road map this week will be:
 1. Set up devices and collect your own data.
 2. Extract and annotate wearable camera data.
 2. Extract and annotate accelerometer data.
-4. Time-series analysis, machine learning activiy classification, and data visualisation.
+4. Time-series analysis, machine learning activity classification, and data visualisation.
 
 ![](./assets/figs/sample_image_timeseries.png)
 
@@ -30,12 +30,12 @@ The text is chiefly about the wearable camera and has been adapted from an infor
 
 ### Camera
 The wearable camera is designed to capture first-person perspective images to log participant behaviour and activity. This camera does not take video or audio, but captures still images approximately every 30 seconds. Annotation of accelerometer data with ground-truth images from a wearable camera is crucial for accurate annotation of accelerometer data and for understanding the activities a participant is involved in during the course of a day in preparation for classification model generation. 
-![](./figs/person_w_cam.png) ![](./figs/autographer.png)
+![](./assets/figs/person_w_cam.png) ![](./assets/figs/autographer.png)
 
 ### Accelerometer
 The Axivity AX3 is a triaxial accelerometer that collects continous movement data from study participants. In most studies, accelerometers are worn on the wrist. However, other body placements including the waist and thigh are also common in many studies. The accelerometer should be fully charged and has a long battery life (at least a week), so it should not need to be charged during the week. The accelerometer is robust and water-proof, and has been designed to be worn when working or sleeping, having a bath or shower, or playing all types of sport (including swimming). Extremes of temperature may damage the battery so it should be taken off while in a spa or sauna.
 
-![](./figs/person_w_acc.png)
+![](./assets/figs/person_w_acc.png)
 
 # 2. Setting up the devices
 Collect your devices from Hang and Scott, who will go through the camera and accelerometer set-up with you. You should have been given 1 wearable camera (Vicon Autographer), 1 wrist-worn accelerometer, and 1 micro-USB cable.
@@ -63,7 +63,7 @@ $ npm start
 
 * Once it has been loaded properly you should see a window like this
 
-![](./figs/browser_init.png)
+![](./assets/figs/browser_init.png)
 
 * Hover your cursor over the different icons to familiarise yourself with the available functions.
 
@@ -106,7 +106,7 @@ $ python3 practicals/scripts/autographer.py --setTime True
 
 Turn the camera on, and check that only the screen below shows when pressing the 'Menus' button:
 
-![](./figs/camera_screen.png)
+![](./assets/figs/camera_screen.png)
 
 
 
@@ -120,7 +120,7 @@ Turn the camera on, and check that only the screen below shows when pressing the
 Please perform the following sets of activities for 5 minutes each. -->
 
 In a typical day of wear, the camera may take up to 3,000 images depicting your everyday life, where you go and the kinds of activities you engage in (e.g. walking to the shop, cycling, socialising). Some images are displayed below for you to get an idea of the content and quality of images that are recorded:
-![](./figs/camera_photos.png)
+![](./assets/figs/camera_photos.png)
 
 #### Do I have to collect my own data?
 You are of course free to decide whether or not to collect your own data. There will be no penalty to you for not doing so.
@@ -170,7 +170,7 @@ If you are engaged in certain manual tasks or using machinery the camera sometim
 
 
 
-![](./figs/person_w_cam.png) ![](./figs/autographer.png)
+![](./assets/figs/person_w_cam.png) ![](./assets/figs/autographer.png)
 
 
 #### What are the possible disadvantages of collecting this data?
@@ -185,7 +185,7 @@ To set up the Axivity AX3 accelerometers, we will use the OpenMovement setup int
 
 For the Windows users, you can download [OMGUI](https://github.com/digitalinteraction/openmovement/wiki/AX3-GUI) and follow the instructions in the `practicals/prac1-deviceSetup/accSetup.pdf`. 
 
-![](./figs/ax_config.jpg)
+![](./assets/figs/ax_config.jpg)
 
 A few key features we need to pay attention to during accelerometer setup are the accelerometer sampling rate and the accelerometer's dynamic range. Setting the sampling rate dictates the number of data points collected by the accelerometer per second. The dynamic range dictages the overall sensitivity of the accelerometer's measurements. On a Mac, using the https://config.openmovement.dev/ setup page, set the sampling rate to 100 Hz and the dynamic range to +/- 8 g. The AX3 has no gyroscope, so leave the "Gyro" setting set to "None". 
 
@@ -206,7 +206,7 @@ In this section, you will learn how to process the camera data using a reference
 
 
 ## 4.1 Setup and installation
-Navigate to the `oxford-wearable-camera-browser` folder that you installed in the previouse sectioin.
+Navigate to the `oxford-wearable-camera-browser` folder that you installed in the previous section.
 
 ###  Folder structure
 We will now walk through how the browser reads in the images for annotation. Our setup has created a new directory in your root folder at `/Users/{yourName}/OxfordImageBrowser/`, this further contains 3 folders: `annotations`,`images`, `schema`.
