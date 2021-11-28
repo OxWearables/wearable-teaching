@@ -21,6 +21,10 @@ project_entries:
     url: prac3-activity-classification
     desc: Model development
 
+  - title: Practical 4
+    url: https://activitymonitoring.github.io/cdtWearablesHealth/
+    desc: Association analysis
+
 
 old_project_entries:
   - title: Soopr
