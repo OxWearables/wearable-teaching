@@ -154,7 +154,7 @@ $ git clone https://github.com/activityMonitoring/oxford-wearable-camera-browser
 
 # 2. Install npm package dependencies
 $ npm install  # electron install might fail. Try run the next line.
-$ npm i -D electron@11.0.0
+$ npm i -D electron@11.0.0 # skip this command if your previous step succeeded 
 
 # 3. Open/run browser
 $ npm start
@@ -409,7 +409,7 @@ Open your annotations file at `~/wearable-teaching/practicals/data/my-annotation
 
 * Other Events
 
-Do the following if you notice that there are other events in your time series which you have annotated but appears to be 'uncodeable' in your plot.
+Do the following if you notice that there are other events in your time series which you have annotated but appears to be `uncodeable` in your plot.
 
 Open the file at `~/wearable-teaching/practicals/data/prac3_process_camera/annotation-label-dictionary.csv` and manually append the table.
 
