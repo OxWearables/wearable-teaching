@@ -5,11 +5,11 @@ layout: post
 # Fundamentals of Sensing, Setting up devices
 
 ### Overview
-Over the next few of days, you will be collecting and analysing your own physical activity data using two devices: a wearable camera and a wrist-mounted accelerometer.
+Over the next few days, you will be collecting and analysing your own physical activity data using two devices: a wearable camera and a wrist-mounted accelerometer.
 
 By going through this practical, we hope that you will learn more about how innovative technologies such as wearable cameras and accelerometers are being used in health and social research. You might also find it interesting to see how many different activities you do in a day and where you spend the majority of your time.
 
-Our road map of this week will be:
+Our road map for this week will be:
 
 1. Set up devices and collect your own data.
 2. Extract and annotate wearable camera data.
@@ -19,7 +19,7 @@ Our road map of this week will be:
 ![](./assets/figs/sample_image_timeseries.png)
 
 ### Today
-In this practical, we will set up your devices to collect data and learn how to annotate the camera images. By the end of the practical, you will be wearing your devices for one whole day until Practical 2, when you will begin analysis and visualisation of your very own data. **Before you start, please download the practical materials that you will use for the rest of the week [here](./assets/practicals.zip)**. We will assume the practicals folder is placed in your home directory. If you don't know where your home directory is, you can run `echo $HOME` in your terminal to find out. You can move on to the next section, if get similar output by running `ls ~/practicals`:
+In this practical, we will set up your devices to collect data and learn how to annotate the camera images. By the end of the practical, you will be wearing your devices for one whole day until Practical 2, when you will begin analysis and visualisation of your very own data. **Before you start, please download the practical materials that you will use for the rest of the week [here](./assets/practicals.zip)**. We will assume the practicals folder is placed in your home directory. If you don't know where your home directory is, you can run `echo $HOME` in your Terminal to find out. You can move on to the next section if you get similar output by running `ls ~/practicals`:
 
 ```shell
 (base) hangy@NDPH8334 ~ % ls ~/practicals 
@@ -49,7 +49,7 @@ The camera is really helpful to get a better understanding of all the different 
 * Over the course of the data collection day you may forget you are wearing the camera and take images that are too personal, unwanted or unflattering. At the end of the period for which you are wearing the camera, you will have the opportunity to view and, if necessary, delete any images that you do not wish to be included in the study.
 
 ### Ethics information on wearable cameras
-The data collected will be anonymised and stored on a password-protected computer and any researchers using the data will have been trained in the ethical handling of such data.  In a typical day of wear, the camera may take up to 3,000 images depicting your everyday life, where you go and the kinds of activities you engage in (e.g. walking to the shop, cycling, socialising). Some images are displayed below for you to get an idea of the content and quality of images that are recorded:
+The data collected will be anonymised and stored on a password-protected computer and any researchers using the data will have been trained in the ethical handling of such data.  On a typical day of wear, the camera may take up to 3,000 images depicting your everyday life, where you go and the kinds of activities you engage in (e.g. walking to the shop, cycling, socialising). Some images are displayed below for you to get an idea of the content and quality of images that are recorded:
 
 ![](./assets/figs/camera_photos.png)
 
@@ -70,40 +70,11 @@ Over the course of the data collection day you may forget you are wearing the ca
 * The height can be adjusted with the black cord (lanyard).
 * Wear the camera outside of your clothes and be careful that your coat doesn’t obscure the lens!
 * There is also a clip, if you prefer to attach the camera to clothes.
-* Try not get the camera wet.
+* Try not to get the camera wet.
 * Make sure to charge the camera after you’ve used it for one day.
 
-In a typical day of wear, the camera may take up to 3,000 images depicting your everyday life, where you go and the kinds of activities you engage in (e.g. walking to the shop, cycling, socialising). Some images are displayed below for you to get an idea of the content and quality of images that are recorded:
+On a typical day of wear, the camera may take up to 3,000 images depicting your everyday life, where you go and the kinds of activities you engage in (e.g. walking to the shop, cycling, socialising). Some images are displayed below for you to get an idea of the content and quality of images that are recorded:
 
-
-### Where and when can I wear the camera?
-We are interested in recording your daily activities so we would like you to wear the camera as much as possible during your waking hours for one day. Once you have woken and showered, put on the camera. Please keep it on until you start preparing for bed that evening; you do not have to wear it whilst you are sleeping. You should not wear the camera while you or others are changing or undressing.
-
-We appreciate that in some places (e.g. hospitals or airports) it may not be appropriate to wear the camera and you should feel free to remove it at any time. You do not need to wear the camera while participating in contact or water based sports (e.g. rugby or swimming), although we would like you to record your journey there and back.
-
-
-### Personal safety
-Remove the camera in any situation where you feel unsafe. For example, if you happen to be out on your own late at night, you may prefer to hide the camera to avoid unwanted attention. If someone tries to take the camera off you, do not attempt to stop them.
-
-If you are engaged in certain manual tasks or using machinery the camera sometimes swings around. For example, if you are using gardening machinery, we advise you remove the device until the activity is finished to avoid discomfort or the possibility of the device getting caught in a dangerous way.
-
-
-### Privacy
-The lens cover can be rotated to give privacy when required. You do not need to turn the camera off. Remember to turn the lens cover back to allow images to be taken once you no longer need privacy. Some people find it easier to hide the camera under their clothing or in a pocket for short periods of privacy.
-
-![](./assets/figs/wear_two.jpg) 
-
-
-### Do I have to collect my own data?
-You are of course free to decide whether or not to collect your own data. There will be no penalty to you for not doing so.
-
-
-### What are the possible disadvantages of collecting this data?
-We do not anticipate any significant effects on your lifestyle. If you do not want to answer any of the questions in the questionnaire or interview you do not have to. You will also be able to check and delete any images taken prior to anyone viewing the images. However, it is possible that while wearing the camera you may be asked about the device by members of the public. In this case we suggest that you say the following:
-
-“I am volunteering for a research project. The device is a wearable camera and the images will be used to record my daily activities. I am happy to remove it if you would like me to.”
-
-You may also print out a wallet-size card which includes this statement and contact information for you to show others.
 
 ---
 
@@ -115,8 +86,6 @@ The accelerometer is extremely robust and should be worn at all times. Do not wo
 
 The accelerometer is robust and water-proof, and has been designed to be worn when working or sleeping, having a bath or shower, or playing all types of sport (including swimming). Extremes of temperature may damage the battery so it should be taken off while you have a sauna.
 
-
-![](./assets/figs/person_w_acc.png)
 
 # 2. Setting up the devices
 Collect your devices from Hang and Scott, who will go through the camera and accelerometer set-up with you. You should have been given 1 wearable camera (Vicon Autographer), 1 wrist-worn accelerometer, and 1 micro-USB cable.
@@ -221,8 +190,6 @@ Please perform the following sets of activities for 5 minutes each. -->
 In a typical day of wear, the camera may take up to 3,000 images depicting your everyday life, where you go and the kinds of activities you engage in (e.g. walking to the shop, cycling, socialising). Some images are displayed below for you to get an idea of the content and quality of images that are recorded:
 ![](./assets/figs/camera_photos.png)
 
-#### Do I have to collect my own data?
-You are of course free to decide whether or not to collect your own data. There will be no penalty to you for not doing so.
 
 #### How should I wear the camera?
 * Please wear the camera on a lanyard around your neck (or clipped to your clothing), with the camera unit at chest height and the lens facing horizontally forwards.
@@ -246,6 +213,9 @@ The camera is not waterproof, so please remove it during water-based activities 
 #### Does the camera record sound or conversations?
 The camera captures images automatically every 20-120 seconds but does not record sound or conversations. The camera has a wide-angle lens, so if worn at chest height, it captures everything within the wearer’s view.
 
+![](./assets/figs/wear_two.jpg) 
+
+
 #### Personal privacy
 * The camera has a privacy lens which allows the wearer to pause image recording. You can remove the camera or stop/pause recording at any time if you are feeling uncomfortable.  Some people find it easier to hide the camera under their clothing or in a pocket for short periods of privacy.
 * The camera will be encrypted so that only the research team can download and view your images.
@@ -268,8 +238,7 @@ Remove the camera in any situation where you feel unsafe. For example, if you ha
 If you are engaged in certain manual tasks or using machinery the camera sometimes swings around. For example, if you are using gardening machinery, we advise you remove the device until the activity is finished to avoid discomfort or the possibility of the device getting caught in a dangerous way.
 
 
-
-![](./assets/figs/person_w_cam.png) ![](./assets/figs/autographer.png)
+![](./assets/figs/person_w_acc.png)
 
 
 #### What are the possible disadvantages of collecting this data?
@@ -341,7 +310,7 @@ We will now walk through how the browser reads in the images for annotation. Our
 
 ## 4.2 Annotating a reference dataset
 
-Now you can open `OxfordImageBrowser` and annotate your own data.
+Now you can open `OxfordImageBrowser` and annotate the reference data.
 
 * Start the image browser.
 
