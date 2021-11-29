@@ -152,7 +152,7 @@ If none of the above visualisations inspire you, feel free to propose and pursue
  * Look into the distribution of activities in your data
 
 
-## 5. Returning your camera and accelerometer
+# 5. Returning your camera and accelerometer
 You should have loaded your images onto your computer by now so you can safely delete the data from you camera!
 
 Plug your camera in, and navigate to the `utilities` folder within `oxford-wearable-camera-browser` and type the following:
