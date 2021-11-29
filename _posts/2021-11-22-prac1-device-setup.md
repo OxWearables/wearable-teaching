@@ -127,7 +127,7 @@ $ git clone https://github.com/activityMonitoring/oxford-wearable-camera-browser
 
 # 2. Install npm package dependencies
 $ cd oxford-wearable-camera-browser
-$ npm install  # electron install might fail. Try run the next line.
+$ npm install  
 
 # 3. Open/run browser
 $ npm start
