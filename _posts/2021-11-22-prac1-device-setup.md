@@ -2,6 +2,9 @@
 layout: post
 ---
 
+* This will become a table of contents (this text will be scrapped).
+{:toc}
+
 # Fundamentals of Sensing, Setting up devices
 
 ### Overview
@@ -17,6 +20,7 @@ Our road map for this week will be:
 4. Conduct time-series analysis, machine learning activity classification, and data visualisation.
 
 ![](./assets/figs/sample_image_timeseries.png)
+
 
 ### Today
 In this practical, we will set up your devices to collect data and learn how to annotate the camera images. By the end of the practical, you will be wearing your devices for one whole day until Practical 2, when you will begin analysis and visualisation of your very own data. **Before you start, please download the practical materials that you will use for the rest of the week [here](./assets/practicals.zip)**. We will assume the practicals folder is placed in your home directory. If you don't know where your home directory is, you can run `echo $HOME` in your Terminal to find out. You can move on to the next section if you get similar output by running `ls ~/practicals`:
@@ -164,7 +168,7 @@ $ python3 practicals/scripts/autographer.py --setTime True
 * You can now safely unplug the device.
 
 
-#### Camera operating instructions
+## 3.2 Camera operating instructions
 
 | Action | Description |
 | ------------- |:-------------:|
@@ -262,7 +266,7 @@ In the web interface you are able to program the AX3 to begin recording at any d
 Please start wearing the accelerometer as soon as you have set up to begin recording. **During your data collection this week, please wear the accelerometer on the wrist of the hand that you usually use to write (i.e. your right wrist if you are right-handed)**. Generally this will be most convenient for people since it is typical to wear a watch on the other wrist. However, if for some reason you cannot wear the accelerometer on the wrist of the hand that you use to write, then please wear it on the other wrist. To correctly align the accelerometer axes, the triangle (arrow) marking on the device should be lined up with the triangle (arrow) marking on the inside of the wrist strap. When wearing the wrist strap, the heart-beat symbol should be on the inside of your wrist (i.e. facing towards you). 
 ![arrow_alignment](https://user-images.githubusercontent.com/45289908/142623930-4c2ef153-acb5-442f-a65b-84f8eb051fd8.png)
 
-# 3. Collecting your own data in-the-wild
+## 3.4 Collecting your own data in-the-wild
 Now that you've set up the devices, you can go ahead with your day as normal to collect data! **Please wear your devices for the rest of today and all day tomorrow**, following which you will begin analysis and visualisation of your very own data!
 
 

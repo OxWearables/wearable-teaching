@@ -3,7 +3,12 @@ layout: post
 ---
 
 
-# Practical 2: Processing accelerometer data
+Practical 2: Processing accelerometer data
+
+* This will become a table of contents (this text will be scrapped).
+{:toc}
+
+
 In this practical, you will process data collected from your accelerometer.
 
 ## Tools needed 
@@ -62,14 +67,14 @@ In this practical, we will focus on the preprocessing steps performed on your ac
 After this you will use our built pipeline and perform activity recognition on your accelerometer data with machine learning.
 
 
-## Buillding features from your accelerometer traces
+### Buillding features from your accelerometer traces
 Your raw accelerometer traces are now in  `practicals/data/myAcc.csv.gz`. It contains 4 columns: time, x, y and z accelerometer readings.
 
 Go through the [jupyter notebook](https://jupyterlab.readthedocs.io/en/stable/) `Features.ipynb` in `practicals/scripts`.
 
 
 
-## Biobank Pipeline
+### Biobank Pipeline
 While you have had a taste of raw sensor data preprocessing through the jupyter notebook, many other operations (such as readings imputation, non-wear time detection ..) can be done on your raw data to further improve your dataset for downstream machine learning tasks.
 
 So instead of using the dataset you just created, `my_data.csv`, we will now go back to your raw data again - the CWA file. We will run some scripts which form the standard analysis pipeline on accelerometer data in the Biobank studies such as [this paper](https://www.nature.com/articles/s41467-018-07743-4). This involves preprocessing operations as well as running a machine learning model that had been trained on the Biobank data for activity recognition.
