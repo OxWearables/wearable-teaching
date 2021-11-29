@@ -302,7 +302,7 @@ We will now walk through how the browser reads in the images for annotation. Our
 
     Should you want to define your own schema, simply copy one of the existing ones and add/remove rows as you see fit. You can use either a text editor (Notepad), or Excel. If using Excel make sure to save as .csv filetype, as .xls files will not be recognised.
 
-    Your annotation training will focus on the schema `annotation.csv`, which is a specific set of activities based on the [Compendium of Physical Activities](https://sites.google.com/site/compendiumofphysicalactivities/home). Have a browse at this file to check the available activity annotations. You should move the schema you want to use into `OxfordImageBrowser/schema`. Template schema files can be found at `praticals/assets/schema`.
+    Your annotation training will focus on the schema `annotation.csv`, which is a specific set of activities based on the [Compendium of Physical Activities](https://sites.google.com/site/compendiumofphysicalactivities/home). Have a browse at this file to check the available activity annotations. You should move the schema you want to use into `OxfordImageBrowser/schema`. Template schema files can be found at `practicals/assets/schema`.
 
 
 * `annotation/`
@@ -356,7 +356,7 @@ After annotating the data using the scheme `annotation.csv`, please perform the 
 
 <!-- 1. `7class.csv`: similar to what you did with `annotation.csv`. -->
 
-1. `social.csv`: annotate events which you think are of a social nature (e.g. having lunch with friends) versus those which are not.
+1. `social.csv`: annotate events which you think are of a social nature (e.g. having lunch with friends) versus those which are not. This schema may install as a blank .csv. To fix this, open the social.csv file and add your own categories. For example, social, non-social, social-with-one, social-with-2plus, etc.
 
 2. `free_text.csv`: In the previous exercises, you have been confined by the definition of the annotations to define 'events' / 'activities'. In this case, could you come up with your own description or annotations and divide up the image timeline according to what feels most natural to you? You would need to put your event annotations / descriptions into a CSV file, and drag these to annotate your events. The current `free_text.csv` has been provided as an example but be creative.
 
@@ -416,7 +416,7 @@ $ bash create_thumbnails.sh ~/OxfordImageBrowser/images/<your_name>/
 ```
 
 
-# 5. (optional) Challenge: corss-check your own annotations with others
+# 5. (Optional) Challenge: Cross-check your own annotations with others
 Try to understand if you can use [this](https://github.com/activityMonitoring/oxford-wearable-camera-browser/blob/master/kappaScoring.py) to compare your annotations with another student. To run this script, you will first need to install four depedencies:
 
 ```shell
