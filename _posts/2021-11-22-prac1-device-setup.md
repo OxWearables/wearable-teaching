@@ -266,7 +266,7 @@ In the web interface you are able to program the AX3 to begin recording at any d
 Please start wearing the accelerometer as soon as you have set up to begin recording. **During your data collection this week, please wear the accelerometer on the wrist of the hand that you usually use to write (i.e. your right wrist if you are right-handed)**. Generally this will be most convenient for people since it is typical to wear a watch on the other wrist. However, if for some reason you cannot wear the accelerometer on the wrist of the hand that you use to write, then please wear it on the other wrist. To correctly align the accelerometer axes, the triangle (arrow) marking on the device should be lined up with the triangle (arrow) marking on the inside of the wrist strap. When wearing the wrist strap, the heart-beat symbol should be on the inside of your wrist (i.e. facing towards you). 
 ![arrow_alignment](https://user-images.githubusercontent.com/45289908/142623930-4c2ef153-acb5-442f-a65b-84f8eb051fd8.png)
 
-## 3.4 Collecting your own data in-the-wild
+## 3.3 Collecting your own data in-the-wild
 Now that you've set up the devices, you can go ahead with your day as normal to collect data! **Please wear your devices for the rest of today and all day tomorrow**, following which you will begin analysis and visualisation of your very own data!
 
 
