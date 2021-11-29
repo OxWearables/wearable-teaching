@@ -370,7 +370,7 @@ Copy the `my-annotations.csv` file over to your `~/practicals/data/` folder.
 
 
 
-### Uncodeable Activities
+<!-- ### Uncodeable Activities
 
 In your resulting time-series file, you might notice that some of your annotations are 'uncodeable'. Here are some ways to fix this.
 
@@ -388,7 +388,7 @@ Open the file at `~/wearable-teaching/practicals/data/prac3_process_camera/annot
 
 For example, 'leisure;recreation;outdoor;15533 rock or mountain climbing' is not currently in the annotation-label dictionary. Append the table, putting 'leisure;recreation;outdoor;15533 rock or mountain climbing' in the 'annotation' column, and a category which you feel is appropriate under the 'label:Doherty2018' column (in this case I've assigned the latter as moderate):
 
-![](./assets/figs/add_uncodeable.png)
+![](./assets/figs/add_uncodeable.png) -->
 
 
 ## 4.3 Extracting data
@@ -432,7 +432,24 @@ Now go a get another annotation file from your friend, you can run the compariso
 ```shell
 $ python kappaScoring.py /..path../annotation.csv
 ```
+
+To generate the file list, you can use this Python script:
+```python
+import os 
+import glob
+
+path2gen = '/Users/hangy/plots'
+file_list = glob.glob(os.path.join(path2gen, '*.JPG'))
+
+with open('file.txt', 'w') as f:
+    for item in file_list:
+        txt2write = item.split('/')[-1]
+        print(txt2write)
+        f.write("%s\n" % txt2write)
+```
 When you are done, let your tutor know what your kappa score is.
+
+
 
 
 
