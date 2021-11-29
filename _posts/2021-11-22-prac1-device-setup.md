@@ -410,3 +410,49 @@ Then to resize: (this could take about 10 minutes to run)
 ```
 $ bash create_thumbnails.sh ~/OxfordImageBrowser/images/<your_name>/
 ```
+
+
+# 5. (optional) Challenge: corss-check your own annotations with others
+Try to understand if you can use [this](https://github.com/activityMonitoring/oxford-wearable-camera-browser/blob/master/kappaScoring.py) to compare your annotations with another student. To run this script, you will first need to install four depedencies:
+
+```shell
+$ pip3 install argparse
+$ pip3 install numpy
+$ pip3 install pandas
+$ pip3 install -U scikit-learn
+```
+
+Then generate the list of image file names in [this](https://github.com/activityMonitoring/oxford-wearable-camera-browser/blob/master/training/train1-fileList.txt) format and store this as `cdt-fileList.txt` under the `~/oxford-wearable-camera-browser/training` folder. Move your own annotation to the same place and rename it as `cdt-ref.csv`.
+
+Now go a get another annotation file from your friend, you can run the comparison script via:
+```shell
+$ python kappaScoring.py /..path../annotation.csv
+```
+When you are done, let your tutor know what your kappa score is.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
