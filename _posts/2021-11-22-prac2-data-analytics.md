@@ -57,7 +57,7 @@ $ cp /Volumes/AX317_41145/CWA-DATA.CWA ~/practicals/data/myAcc.cwa
 Run the following in your `praticals` folder:
 ```
 $ cd ~/practicals
-$ accProcess.py data/myAcc.cwa --rawOutput True --activityClassification False --deleteIntermediateFiles False
+$ accProcess data/myAcc.cwa --rawOutput True --activityClassification False --deleteIntermediateFiles False
 ```
 
 
@@ -82,13 +82,13 @@ So instead of using the dataset you just created, `my_data.csv`, we will now go 
 Note that these operations also involve mapping the fine-grained annotations you had into larger classes. You shall still be in the `pratical` folder.
 
 ```
-$  accProcess.py data/myAcc.cwa --useFilter False
+$  accProcess data/myAcc.cwa --useFilter False
 ```
 
 To visualise the time series and activity classification output:
 
 ```
-$ accPlot.py data/myAcc-timeSeries.csv.gz data/plot.png
+$ accPlot data/myAcc-timeSeries.csv.gz data/plot.png
 ```
 
 
