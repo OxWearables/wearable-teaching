@@ -37,7 +37,7 @@ Once your envrionment has been activated, install the package using `pip`:
 ```shell
 $ pip install accelerometer
 ```
-You should keep your environment active for the remaining for the pratical.
+You should keep your environment active for the remaining for the practical.
 
 
 ## 2. Extracting data
@@ -54,7 +54,7 @@ $ cp /Volumes/AX317_41145/CWA-DATA.CWA ~/practicals/data/myAcc.cwa
 * **Safely disconnect the device and put your accelerometer back on!**
 
 * Currently the raw data stored in the CWA file does not allow easy extraction of the 3-axis acceleration data, so we need to convert this to a more suitable format such as CSV for furthur manipulation. 
-Run the following in your `praticals` folder:
+Run the following in your `practicals` folder:
 ```
 $ cd ~/practicals
 $ accProcess data/myAcc.cwa --rawOutput True --activityClassification False --deleteIntermediateFiles False
@@ -79,7 +79,7 @@ While you have had a taste of raw sensor data preprocessing through the jupyter 
 
 So instead of using the dataset you just created, `my_data.csv`, we will now go back to your raw data again - the CWA file. We will run some scripts which form the standard analysis pipeline on accelerometer data in the Biobank studies such as [this paper](https://www.nature.com/articles/s41467-018-07743-4). This involves preprocessing operations as well as running a machine learning model that had been trained on the Biobank data for activity recognition.
 
-Note that these operations also involve mapping the fine-grained annotations you had into larger classes. You shall still be in the `pratical` folder.
+Note that these operations also involve mapping the fine-grained annotations you had into larger classes. You shall still be in the `practical` folder.
 
 ```
 $  accProcess data/myAcc.cwa --useFilter False

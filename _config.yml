@@ -1,4 +1,4 @@
-title: Wearables Machine Learning praticals
+title: Wearables Machine Learning Practical
 author:  Oxford Wearables Group
 url: https://activitymonitoring.github.io/wearable-teaching/ # root address of the site
 description: > # description of the site (multiple lines allowed)
@@ -31,7 +31,7 @@ theme_config:
   show_misc_list: false # show generic vertical list for misc details, add _data/home.yml
   # options for "home" page
   home:
-    title_projects: Praticals
+    title_projects: Practical
     title_misc_list: Details
 
 highlighter: rouge
