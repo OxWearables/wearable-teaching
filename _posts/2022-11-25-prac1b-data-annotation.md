@@ -70,7 +70,7 @@ We will now walk through how the browser reads in the images for annotation. Our
 
 
 
-## 4.2 Annotating a reference dataset
+##  Annotating a reference dataset
 
 Now you can open `OxfordImageBrowser` and annotate the reference data.
 
@@ -151,7 +151,7 @@ For example, 'leisure;recreation;outdoor;15533 rock or mountain climbing' is not
 
 
 
-# 5. (Optional) Challenge: Cross-check your own annotations with others
+# (Optional) Challenge: Cross-check your own annotations with others
 Try to understand if you can use [this](https://github.com/activityMonitoring/oxford-wearable-camera-browser/blob/master/kappaScoring.py) to compare your annotations with another student. To run this script, you will first need to install four depedencies:
 
 ```shell

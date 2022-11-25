@@ -9,23 +9,23 @@ navbar_entries:
     url: https://www.abhinav.co
 
 project_entries:
-  - title: Practical 1a, device setup
+  - title: Practical 1
     url: prac1a-device-setup
     desc: Data collection
 
-  - title: Practical 1b, device setup
+  - title: Practical 2
     url: prac1b-data-annotation
     desc: Data annotation
 
-  - title: Practical 2
+  - title: Practical 3
     url: prac2-data-analytics
     desc: Data processing
 
-  - title: Practical 3
+  - title: Practical 4
     url: prac3-activity-classification
     desc: Model development
 
-  - title: Practical 4
+  - title: Practical 5
     url: https://activitymonitoring.github.io/cdtWearablesHealth/
     desc: Association analysis
 
