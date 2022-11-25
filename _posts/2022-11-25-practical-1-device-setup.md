@@ -12,7 +12,7 @@ Over the next few days, you will be collecting and analysing your own physical a
 
 By going through this practical, we hope that you will learn more about both the promise of but also ethical considerations with using technologies such as wearable cameras and accelerometers for health and social research. You might also find it interesting to see how you can use these devices to measure your own activity and begin deploying custom algorithms on your own data. 
 
-Our road map for this week will be: TODO make sure this roadmap is accurate with other researchers
+Our road map for this week will be:
 
 1. Set up devices and collect your own data.
 2. Extract and annotate wearable camera data.
@@ -27,13 +27,19 @@ Today will involve two practical sessions. In this practical, we will set up you
 
 
 # 0. Setup 
-Before you start, please download the practical materials that you will use for the rest of the week [here](./assets/practicals.zip). We will assume the practicals folder is placed in your home directory. If you don't know where your home directory is, you can run `echo $HOME` in your Terminal to find out. You can move on to the next section if you get similar output by running `ls ~/practicals`:
+Before you start, please download the practical materials that you will use for the rest of the week [here](./assets/practicals.zip). We will assume the practicals folder is placed in your home directory. If you don't know where your home directory is, you can run `echo $HOME` in your Terminal to find out. You can easily navigate to your home directory by typing `cd ~`. 
+
+You can move on to the next section if you get similar output by running `ls ~/practicals`:
 
 ```shell
 (base) hangy@NDPH8334 ~ % ls ~/practicals 
 assets	data	scripts
 ```
 
+Also, if you have not done so already, install [homebrew](https://brew.sh):
+```shell
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 ## Context
 A lot of what we will be doing today stems from the CAPTURE-24 study. Previously, many lifestyle behaviours were captured using self-reported data in time-use diaries and this study sought to compare this to using wearable devices. Take a moment to look through this foundational study: [Testing Self-Report Time-Use Diaries against Objective Instruments in Real Time (Gershuny et al., 2020)](https://journals.sagepub.com/doi/abs/10.1177/0081175019884591). 
@@ -153,8 +159,6 @@ It is also worth taking this time to reflect on the various ethical implications
 
 **How long do I need to wear the camera for?**
 We would like you to wear the camera for the time between this practical session and the practical this afternoon. If you feel uneasy about wearing the device at any point, feel free to close the lense cover, hide it away or take it off. 
-
-TODO: check from here onwards
 
 **How do I charge the camera?**
 The camera will be fully charged before the practical, **but we recommend checking its battery percentage at the start of each day**. You do this by turning the camera on and pressing the “MENU” button to the side of the device. The battery percentage should then appear at the top of the display screen. If the battery percentage is <100%, please charge the camera using the yellow micro-USB cable provided.
