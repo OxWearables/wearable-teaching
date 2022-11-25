@@ -9,9 +9,13 @@ navbar_entries:
     url: https://www.abhinav.co
 
 project_entries:
-  - title: Practical 1
-    url: prac1-device-setup
+  - title: Practical 1a, device setup
+    url: prac1a-device-setup
     desc: Data collection
+
+  - title: Practical 1b, device setup
+    url: prac1b-data-annotation
+    desc: Data annotation
 
   - title: Practical 2
     url: prac2-data-analytics
