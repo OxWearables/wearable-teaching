@@ -10,9 +10,9 @@ layout: post
 In this practical, you will learn how to process and annotate the camera data you have been collecting over the past few hours.
 
 # 0. Oxford wearable browser
-Start by installing the Oxford wearable camera browser to your home folder. You can find more details about the camera browser on [GitHub](https://github.com/activityMonitoring/oxford-wearable-camera-browser). In essence, it is a GUI which allows researchers to annotate camera logger data. Note, this browser is currently in the process of being updated, so do not be surprised if there are dependency warnings in this legacy version. 
+Start by installing the Oxford wearable camera browser to your home folder. You can find more details about the camera browser on [GitHub](https://github.com/activityMonitoring/oxford-wearable-camera-browser). In essence, it is a graphical user interface that allows researchers to annotate camera logger data. Note, this browser is currently in the process of being updated, so do not be surprised if there are dependency warnings in this legacy version. 
 
-You want to make sure you have node.js installed on your iMac:
+Start by installing node.js on your iMac:
 ```shell 
 $ brew install node
 ```
@@ -42,7 +42,7 @@ We start by returning to the `~/practicals/scripts` directory. We will again use
 $ cd ~/practicals/scripts
 $ source .venv/bin/activate
 ```
-Now plug in your camera. To download the photos:
+Now plug in your camera. To download the photos, run:
 ```shell 
 $ python autographer.py --download True --destDir ~/OxfordImageBrowser/images/<your name>
 ```
@@ -53,7 +53,7 @@ $ python autographer.py --delete True
 
 Safely disconnect the device and return it to your tutor. If you open the folder (`~/OxfordImageBrowser/images/<your_name>`) where you extracted the images to, you can browse through the images and delete any that you wish to. 
 
-In order for the camera browser to work, we need to create thumbnail sized version of your photos. To do this, we use , and then we will use `create_thumbnails.py`. We first install `pillow`, which is used for the image processing. Assuming you are still within the virtual environment in the `~/practicals/scripts` folder, run:
+In order for the camera browser to work, we need to create thumbnail sized version of your photos. First install `pillow`, which is used for the image processing. Assuming you are still within the virtual environment in the `~/practicals/scripts` folder, run:
 
 ```shell
 $ pip install pillow
@@ -82,13 +82,13 @@ We should now have the following directory structure in `~/OxfordImageBrowser/`:
 
     This is where you will store csv files which specify your annotation schemes.
 
-    You should have 4 schema .csv files (7class, annotation, free_text and social), of which social and free_text are currently blank. We will later edits these to define our own schema.
+    You should have 4 schema .csv files (7class, annotation, free_text and social), of which social and free_text are currently blank. We will later edit these to define our own schema.
 
-    Your annotation training will focus on the schema `annotation.csv`, which is a specific set of activities based on the [Compendium of Physical Activities](https://sites.google.com/site/compendiumofphysicalactivities/home). Have a browse at this file to check the available activity annotations.
+    Your annotation training will focus on the schema `annotation.csv`, which is a specific set of activities based on the [Compendium of Physical Activities](https://sites.google.com/site/compendiumofphysicalactivities/home). Have a browse through this file to check the available activity annotations.
 
 * `annotation/`
 
-    This is where the Browser outputs your annotation files by default. A sub-folder will be created for each participant found in `images/`.
+    This is where the browser outputs your annotation files by default. A sub-folder will be created for each participant found in `images/`.
 
 
 
@@ -118,8 +118,6 @@ The overall flow is [described in great detail here](https://github.com/OxWearab
 3. Pull the selected annotation onto the image(s). To change an activity annotation simply drag another annotation over it.
 
 Once you have finished annotating your data, export the annotations to a .csv file (inside `~/OxfordImageBrowser/annotations/<your_name>/`). This should happen automatically, but you can always do this manually by clicking on the `download annotation` button.
-
-
 
 After annotating the data using the scheme `annotation.csv`, please perform the following annotation exercises.
 
@@ -166,4 +164,4 @@ When you are done, let your tutor know what your kappa score is.
 
 # Matching with accelerometer timings
 Another direction is to develop code that matches you accelerometer data with your camera annotations. 
-Importantly, check which annotation scheme is used in the later notebooks (probably 7class?)
+Importantly, check which annotation scheme is used in the later notebooks (probably 7class?).
