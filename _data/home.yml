@@ -10,11 +10,11 @@ navbar_entries:
 
 project_entries:
   - title: Practical 1
-    url: prac1a-device-setup
+    url: practical-1-device-setup
     desc: Data collection
 
   - title: Practical 2
-    url: prac1b-data-annotation
+    url: practical-2-data-annotation
     desc: Data annotation
 
   - title: Practical 3
