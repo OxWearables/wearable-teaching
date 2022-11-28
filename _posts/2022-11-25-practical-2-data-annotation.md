@@ -119,23 +119,54 @@ The overall flow is [described in great detail here](https://github.com/OxWearab
 
 Once you have finished annotating your data, export the annotations to a .csv file (inside `~/OxfordImageBrowser/annotations/<your_name>/`). This should happen automatically, but you can always do this manually by clicking on the `download annotation` button.
 
-After annotating the data using the scheme `annotation.csv`, please perform the following annotation exercises.
-
-<!-- 1. `7class.csv`: similar to what you did with `annotation.csv`. -->
-
-1. `social.csv`: annotate events which you think are of a social nature (e.g. having lunch with friends) versus those which are not. Open the social.csv file and add your own categories. For example, social, non-social, social-with-one, social-with-2plus, etc.
-
-2. `free_text.csv`: In the previous exercises, you have been confined by the definition of the annotations to define 'events' / 'activities'. In this case, could you come up with your own description or annotations and divide up the image timeline according to what feels most natural to you? You would need to put your event annotations / descriptions into a CSV file, and drag these to annotate your events. The current `free_text.csv` has been provided as an example but be creative.
+## Exercise: Matching with accelerometer timings
+So far this practical has streamlined data collection and processing. However, now we are going to get you to dive into some messy data processing. We are going to get you to match you accelerometer data with your camera annotations. In order to do this, you will need the `.csv` file of annotations, and you will need the `.cwa` file that you get from plugging in your accelermeter into your iMac. We will leave it up to you to come up with a suitable project structure to contain your data and your code (perhaps, take inspiration for the software engineering module). In order to process the accelerometer data, look at [actipy](https://github.com/OxWearables/actipy), which is a python package for processing acclerometer data. It is up to you whether you want to do the data-processing in a notebook, or as a `.py` script. Matching up the annotations and accelerometer data will involve writing a function that matches each accelerometer data point, which has a time stamp, with one of the annotation labels, which is associated with a time range. However, this is not a one-to-one mapping since one annotation label might encompass multiple accelerometer readings. 
 
 
-# (Optional) Challenge: Cross-check your own annotations with others
-Try to understand if you can use [this](https://github.com/activityMonitoring/oxford-wearable-camera-browser/blob/master/kappaScoring.py) to compare your annotations with another student. To run this script, you will first need to install four depedencies:
+At the end of this, you should have a numpy array of shape `[T, 3]` from the `T` accelerometer readings (each reading contains acceleration recordings in the X, Y and Z direction), a numpy array of shape `[T]` of the times that these readings were taken at and an array of shape `[T]` of the corresponding labels. 
+For instance, if you have `T=10` time readings, and have named the three arays `accel`, `times` and `labels`, then you get the follwing:
+```python
+>>> print(accel.shape, times.shape, labels.shape)
+(10, 3) (10,) (10,)
+```
+
+You can save these three files using:
+```python
+>>> np.save("accel.npy", accel)
+>>> np.save("times.npy", times)
+>>> np.save("labels.npy", labels)
+```
+
+We recommend that you compress the file that you save your data to so that you can send it to the Virtual Machines (VMs) for the later practicals where you will be using the VMs and their GPUs for data processing. One can compress a folder (or file) using:
+```
+tar -zcvf my_data.tar.gz my_data
+``` 
+- `z` is the specific flag which specifies that we want to use gzip compression,
+- `c` stands for compress, 
+- `v` stands for verbose which will give you information about the folder while it is being compressed, and
+- `f` stands for force (we will force the compression).
+
+Then, to extract the file, type:
+```shell
+tar -xvf my_data.tar.gz
+```
+
+To send files between your local machine and a VM, one can use [scp](https://www.geeksforgeeks.org/scp-command-in-linux-with-examples/). 
+
+## Exercise: Coming up with your own anntations
+`free_text.csv`: In the previous exercises, you have been confined by the definition of the annotations to define 'events' / 'activities'. Now come up with your own description or annotations and divide up the image timeline according to what feels most natural to you. In order to do this, put your event annotations / descriptions into the `free_text.csv` file, and drag these to annotate your events. You can edit this file within any tabular data editor, such as Microsoft Excel, or even just TextEdit. If you are confused about how to structure hierachical annoations, see the annotation.csv file. In essence, one uses semicolons `;` to describe hierachical annotations.
+
+## Exercise: Identify the challenges with potentially noisy labels
+One of the issues with annotations is that they may reflect the biases of the annotater. Typically, a well annotated data-set requires multiple annotaters annotating each data-point and some methodology for choosing the most likely label, such as choosing the majority label. In the case of annotating the CAPTURE-24 dataset, annotaters had to go through a training process that required them to obtain a kappa score of 0.8 relative to expert annotations on a subset of the data-set. Firstly, come up with some of the potential ways one can mitigate against biased labels, and also some of the implications of doing research using biased labels.
+
+## Optional: Cross-check your own annotations with others
+One practical way one can try to quantify noise in the labels is by comparing multiple annotations of the same data. If you are willing to exchange data with someone else, and annotate each other's data, the you can use [this](https://github.com/activityMonitoring/oxford-wearable-camera-browser/blob/master/kappaScoring.py) to compare your annotations with the other person's. To run this script, you will first need to install four depedencies:
 
 ```shell
-$ pip3 install argparse
-$ pip3 install numpy
-$ pip3 install pandas
-$ pip3 install -U scikit-learn
+$ pip install argparse
+$ pip install numpy
+$ pip install pandas
+$ pip install -U scikit-learn
 ```
 
 Then generate the list of image file names in [this](https://github.com/activityMonitoring/oxford-wearable-camera-browser/blob/master/training/train1-fileList.txt) format and store this as `cdt-fileList.txt` under the `~/oxford-wearable-camera-browser/training` folder. Move your own annotation to the same place and rename it as `cdt-ref.csv`.
@@ -160,8 +191,3 @@ with open('file.txt', 'w') as f:
         f.write("%s\n" % txt2write)
 ```
 When you are done, let your tutor know what your kappa score is.
-
-
-# Matching with accelerometer timings
-Another direction is to develop code that matches you accelerometer data with your camera annotations. 
-Importantly, check which annotation scheme is used in the later notebooks (probably 7class?).
