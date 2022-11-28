@@ -153,7 +153,7 @@ tar -xvf my_data.tar.gz
 
 To send files between your local machine and a VM, one can use [scp](https://www.geeksforgeeks.org/scp-command-in-linux-with-examples/). 
 
-## Exercise: Coming up with your own anntations
+## Exercise: Coming up with your own annotations
 `free_text.csv`: In the previous exercises, you have been confined by the definition of the annotations to define 'events' / 'activities'. Now come up with your own description or annotations and divide up the image timeline according to what feels most natural to you. In order to do this, put your event annotations / descriptions into the `free_text.csv` file, and drag these to annotate your events. You can edit this file within any tabular data editor, such as Microsoft Excel, or even just TextEdit. If you are confused about how to structure hierachical annoations, see the annotation.csv file. In essence, one uses semicolons `;` to describe hierachical annotations.
 
 ## Exercise: Identify the challenges with potentially noisy labels
