@@ -1,0 +1,15 @@
+---
+layout: post
+---
+
+# Practical 5 and 6: Association analysis in UK Biobank
+
+Practical sessions on Thursday morning and Friday morning will focus on how accelerometer-derived phenotypes can be used in UK Biobank to generate epidemiological insights. 
+
+The session on Thursday focuses on **accessing** the data. We will understand some of the non-accelerometer data avaialable in UK Biobank, meet the [UK Biobank Research Analysis Platform](https://www.ukbiobank.ac.uk/enable-your-research/research-analysis-platform) and use it to prepare data for analysis. 
+
+The session on Friday focuses on **running an epidemiological analysis** using data from UK Biobank. 
+
+Both sessions use [this demo pipeline](https://github.com/OxWearables/rap_wearables), with Thursday's session focussing on [notebook 1](https://github.com/OxWearables/rap_wearables/blob/main/1_Extract_Data.ipynb) and Friday's on notebooks 2-4.
+
+**Tutors:** Aidan Acquah, Alaina Shreves, Rosemary Walmsley
