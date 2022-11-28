@@ -132,11 +132,14 @@ Now, go to `https://config.openmovement.dev/`.
 
 ![](./assets/figs/ax_config.jpg)
 
-0. Click `Connect USB device..` and select the accelerometer which will be listed as `AX3 Composite Device...`. 
-1. Write a session ID number, e.g. `42`
-2. Change the sampling frequency to 100Hz and the +/- 8 g.
-3. Change the start date to today.
-4. Leave the rest to the default settings.
+
+
+0. Plug in your accelerometer into the computer with the provided cable. Wait until the light on the device has stopped flashing red, 
+1. Go to the website and click `Connect USB device..` on the wesbite and select the plugged-in accelerometer which will be listed as `AX3 Composite Device...`. Click `Connect`.
+2. Write a session ID number, e.g. `42`
+3. Change the sampling frequency to 100Hz and the +/- 8 g.
+4. Change the start date to today.
+5. Leave the rest to the default settings.
 
 Finally, click `Configure` and if it succeeds, you should see the message "Configured - please disconnect device". If the web interface does not work ask your tutor to help you! The local time of the accelerometer will be synced to the machine you set it up on. 
 
