@@ -2,9 +2,6 @@
 layout: post
 ---
 
-
-Practical 2: Processing accelerometer data
-
 * This will become a table of contents (this text will be scrapped).
 {:toc}
 
