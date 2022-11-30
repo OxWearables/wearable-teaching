@@ -10,7 +10,7 @@ The session on Thursday focuses on **accessing** the data. We will understand so
 
 The session on Friday focuses on **running an epidemiological analysis** using data from UK Biobank. 
 
-Both sessions use [this demo pipeline](https://github.com/OxWearables/rap_wearables), with Thursday's session focussing on [notebook 1](https://github.com/OxWearables/rap_wearables/blob/main/1_Extract_Data.ipynb) and Friday's on notebooks 2-4.
+Both sessions use [this demo pipeline]([https://github.com/OxWearables/rap_wearables](https://github.com/OxWearables/rap_wearables/tree/cdt_dec_2022)), with Thursday's session focussing on [notebook 1](https://github.com/OxWearables/rap_wearables/blob/main/1_Extract_Data.ipynb) and Friday's on notebooks 2-4.
 
 **Tutors:** Aidan Acquah, Alaina Shreves, Rosemary Walmsley
 
