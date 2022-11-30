@@ -26,7 +26,7 @@ project_entries:
     desc: Model development
 
   - title: Practical 5
-    url: https://activitymonitoring.github.io/cdtWearablesHealth/
+    url: prac5-association-analysis
     desc: Association analysis
 
 
