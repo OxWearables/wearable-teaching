@@ -21,7 +21,9 @@ When working with participant data, good Information Governance/Security is esse
 
 ## Practicalities: getting the notebooks onto the UK Biobank Research Analysis Platform
 
-The UK Biobank Research Analysis Platform has permanent storage. When you are running JupyterLab (or RStudio), you are temporarily running a cloud computer that has some temporary storage associated with it. You can transfer things from permanent storage to temporary storage and back again. **Important:** at the end of a session, before terminating your cloud computer, you need to make sure anything you need from the temporary storage is transferred over to permanent storage. If not, it will be gone! 
+The UK Biobank Research Analysis Platform has permanent storage. In particular, you will be using a project called 'CDT-DataChallenge-Dec22'. We'll set up a folder under 'users' for each person. Please store your files in that folder. When you first log in to the platform, you may wish to set up folders called 'data' and 'outputs' within this folder (some of the notebooks will assume you have done that). 
+
+When you are running JupyterLab (or RStudio), you are temporarily running a cloud computer that has some temporary storage associated with it. You can transfer things from permanent storage to temporary storage and back again. **Important:** at the end of a session, before terminating your cloud computer, you need to make sure anything you need from the temporary storage is transferred over to permanent storage. If not, it will be gone! 
 
 There are different ways you could get the practical materials from GitHub onto the Research Analysis Platform. Here's one: 
 
