@@ -26,7 +26,7 @@ project_entries:
     desc: Model development
 
   - title: Practical 5
-    url: prac5-association-analysis
+    url: prac5-6-Association-Analysis-in-UK-Biobank
     desc: Association analysis
 
 
