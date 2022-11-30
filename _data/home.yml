@@ -10,19 +10,19 @@ navbar_entries:
 
 project_entries:
   - title: Practical 1
-    url: practical-1-device-setup
+    url: prac1-device-setup
     desc: Data collection
 
   - title: Practical 2
-    url: practical-2-data-annotation
+    url: prac2-data-annotation
     desc: Data annotation
 
   - title: Practical 3
-    url: prac2-data-analytics
+    url: prac3-data-analytics
     desc: Data processing
 
   - title: Practical 4
-    url: prac3-activity-classification
+    url: prac4-activity-classification
     desc: Model development
 
   - title: Practical 5
