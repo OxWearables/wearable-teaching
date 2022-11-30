@@ -43,6 +43,7 @@ V. To work with the repository, change the directory into the repository and che
 ```shell
 $ cd rap_wearables
 $ git checkout cdt_dec_2022 # This branch has some minor changes relative to main making it more suitable for our work this week 
+$ cd .. # We go back up one level just so as to avoid filling the rap_wearables repo with data etc
 ```
 
 VI. You can now run notebooks from the repository and edit them as you like. 
