@@ -70,5 +70,11 @@ We'd also love to hear any suggestions for how we could improve these practicals
 
 ## Reading and useful links
 
+Lots of online resources are available to understand the UK Biobank study and the Research Analysis Platform. Some are linked to within the individual tutorials, but some more general resources are listed here. Please do spend some time exploring them - this will be useful both now and in the Data Challenge! 
+
+
+- To find out more about particular UK Biobank variables, use the [Data Showcase](https://biobank.ndph.ox.ac.uk/ukb/). It's well worth spending some time exploring this.
+- For more about UK Biobank data collection and history, [this](https://journals.plos.org/plosmedicine/article?id=10.1371/journal.pmed.1001779) is a good summary
+- To understand some of the potential for selection bias in UK Biobank, perhaps start with [Fry et al, 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5860371/)
 - Documentation for the Research Analysis Platform: https://dnanexus.gitbook.io/uk-biobank-rap/
 - The DNANexus community: https://community.dnanexus.com/s/ (useful for troubleshooting)
