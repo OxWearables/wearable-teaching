@@ -57,6 +57,13 @@ Alternatively, if you already have things in permanent storage (e.g. having prev
 $ dx download -r users/Rosemary_Walmsley32/rap_wearables # again change the file path as appropriate
 ```
 
+## Troubleshooting and bugs
+
+If you have a question, speak to any of the tutors (Aidan Acquah, Alaina Shreves, Rosemary Walmsley).
+
+There are probably bugs. If you find them, please let us know!
+
+We'd also love to hear any suggestions for how we could improve these practicals for future students.
 
 ## Reading and useful links
 
