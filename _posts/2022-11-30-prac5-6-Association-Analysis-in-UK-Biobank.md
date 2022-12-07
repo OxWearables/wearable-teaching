@@ -83,15 +83,11 @@ We are going to use the command line interface to transfer the file directly and
 
 1. Login to the VM and complete all steps below on the VM.
 
-2. Load a pip environment (to allow you control over package installation):
-```bash
-python3 -m venv env_for_dx
-source env_for_dx/bin/activate
-```
+2. Ensure your existing conda environment is activated by running: `conda activate wearables_workshop`. 
 
-3. Navigate to the directory containing the files you need locally*.
+3. Run `pip3 install dxpy` ([Downloads - DNAnexus Documentation](https://documentation.dnanexus.com/downloads))). You may find you need to update pip: `pip install --upgrade pip`.
 
-4. Run `pip3 install dxpy` ([Downloads - DNAnexus Documentation](https://documentation.dnanexus.com/downloads))).You may find you need to update pip: `pip install --upgrade pip`.
+4. Navigate to the directory containing the files you need locally*.
 
 5. Run `dx login` to log you in to the RAP ([Command Line Quickstart - DNAnexus Documentation](https://documentation.dnanexus.com/getting-started/cli-quickstart). You will need to enter your username and password. You may also have to select the project you want. 
 
