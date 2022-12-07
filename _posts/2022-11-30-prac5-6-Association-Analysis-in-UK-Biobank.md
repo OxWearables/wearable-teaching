@@ -95,9 +95,7 @@ We are going to use the command line interface to transfer the file directly and
 
 7. To download the file my_eid_list.txt, run `dx download my_eid_list.txt`. 
 
-8. To upload the file accelerometer_summary.csv, run `dx upload accelerometer_summary.csv`. 
-
-[Note the similarities with how you work with files in the temporary storage on a cloud instance.]
+8. To upload the file accelerometer_summary.csv, run `dx upload accelerometer_summary.csv`. [Note the similarities with how you work with files in the temporary storage on a cloud instance.]
 
 9. Logout using `dx logout`. Your file should now be downloaded/ uploaded. 
 
